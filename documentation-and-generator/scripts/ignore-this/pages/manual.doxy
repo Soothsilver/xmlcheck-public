@@ -1,0 +1,79 @@
+/** @page page_manual User manual
+
+@section sec_manualIntro Introduction
+
+@projectname is an online application for easy assignment and correction of homeworks.
+It enables teachers to create virtual lectures with associated sets of problems
+and create plugins for partial or complete correction of solutions. Excercise group
+tutors are then able to assign these problems to students in their groups, who
+can upload their solutions and get them (automatically) corrected and rated.
+
+
+@section sec_appFeatures Application features
+
+@subsection sec_appFeatureUi Simple but powerful user interface
+
+User interface uses just a few display elements enhanced to provide all required
+data display & editing capabilities, which makes it easy and fun to use. It is
+themable with many different themes already included and possibility to easily
+add more.
+@ref page_ui "More..."
+
+@subsection sec_appFeaturePlugins Fully customizable correction automation
+
+Application supports "plugins", which are programs/scripts written by lecturers
+used for automated correction of student's solutions. Plugins can correct any
+type of input, which makes @projectname completely independent on homework type.
+@ref page_plugins "More..."
+
+@subsection sec_appFeatureUsers Flexible user system
+
+@projectname supports users with various levels of access, ranging from student
+to system administrator. User types are fully customizable, which makes the
+application easily scalable for differently sized enviroments.
+@ref page_users "More..."
+
+@subsection sec_appFeatureModularity Modular structure for high reusability
+
+The program is modular in all its aspects. Plugins can be configured separately
+for every problem and thus used for correcting the same problem with different
+data sets, or for anything else for that matter. Lectures can be set up for many
+years and coexist peacefully with their problems being assigned again and again
+every year. Students can be in as many groups as they like, etc.
+
+Application code is modular as well, with user interface completely decoupled from
+the application core, which makes it possible to create completely new (and possibly
+quite different) user interface if desired.
+
+
+@section sec_manualContents Manual contents
+
+<ul>
+	<li>@subpage page_installation</li>
+	<li>@subpage page_plugins</li>
+	<li>@subpage page_users</li>
+	<li>@subpage page_ui
+		<ul>
+			<li>@subpage page_uiLayout</li>
+			<li>@subpage page_table</li>
+			<li>@subpage page_form</li>
+			<li>@subpage page_errors</li>
+		</ul>
+	</li>
+	<li>@subpage page_roleSpecific
+		<ul>
+			<li>@subpage page_administration</li>
+			<li>@subpage page_lectures</li>
+			<li>@subpage page_groups</li>
+			<li>@subpage page_student</li>
+		</ul>
+	</li>
+	<li>@subpage page_faq "F.A.Q."</li>
+</ul>
+
+If you're not sure, which user-specific manual to choose, it is recommended to
+start with @ref page_users, continue with @ref page_ui, and then continue
+to appropriate role-specific section.
+
+
+*/

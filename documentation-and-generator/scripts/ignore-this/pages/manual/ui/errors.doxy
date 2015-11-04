@@ -1,0 +1,47 @@
+/** @page page_errors Error reporting
+
+Any errors that occur durring application run are displayed either in error panels
+or in error dialogs, depending on their importance and currently displayed content.
+
+Different highlighting and display modes are used to differentiate between errors
+of different importance. Most important (a.k.a. fatal) errors are always displayed
+in dialog window apart from being highlighted, so that they really draw attention
+to occured problem. All other errors are displayed using @ref sec_errorPanels "error panels",
+apart from one exception. When in @ref sec_uiLayoutLogin "pre-login layout", all errors
+are shown in dialog windows.
+
+@image html errorDialog.screen.png Fatal error dialog
+
+@section sec_errorPanels Error panels
+
+Error panels appear at the top of content area, each panel containing single error
+message. Panels automatically disappear after 15 seconds unless closed earlier
+or pinned (see below).
+
+@image html errorPanels.screen.png Error panels
+
+<dl>
+	<dt>Icon</dt>
+	<dd>Icon supplements panel highlighting (notices have "info" icon, while warnings
+		and errors have exclamation mark icon).</dd>
+	<dt>Message</dt>
+	<dd>Error (resp. warning or notice) message text.</dd>
+	<dt>Pin / unpin</dt>
+	<dd>Click to pin/unpin error. Pinned error will not be automatically hidden
+		after 15 seconds. Icon pointing to the left means the error is pinned, icon
+		pointing down means it isn't.</dd>
+	<dt>Hide error</dt>
+	<dd>Click to hide (remove) error.</dd>
+</dl>
+
+Errors are highlighted appropriately for their importance. Four importance levels
+are distinguished - notice, warning, error, and fatal error (displayed in dialog).
+
+@section sec_errorLog Error log
+
+All errors that occured during application run can be found accessed any time
+under @mir System > UI error log @endmir. All users can access this log, regardless
+of type of their user account. However, the log stores only errors that occured
+since application start (i.e. page (re)load).
+
+*/

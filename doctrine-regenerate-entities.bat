@@ -1,0 +1,1 @@
+php control.php doctrine orm:generate:entities --generate-annotations -v "."

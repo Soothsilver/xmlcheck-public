@@ -1,0 +1,116 @@
+/** @page page_table Table element
+
+Table element is used to display almost all application data while it is not
+being edited. It has quite a few additional functions, all of which are described
+below.
+
+@image html table.screen.png Table element
+
+Descriptions of individual parts are below, divided into groups together with
+short explanations of their purpose, etc.
+
+
+@section sec_tablePartsBase Base parts
+
+Base table parts are those that are used all the time while using the application.
+
+@subsection sec_tablePartActions Actions
+
+Table action buttons are the means by which the user interacts with the application.
+Click on action button always results in some action, be it content switch (e.g.
+editing form is shown instead of the table), or direct server request.
+
+<dl>
+	<dt>Row actions</dt>
+	<dd>Buttons for performing actions on individual rows (edit, delete, show
+		associated data in another table, download associated files, ...).</dd>
+	<dt>Global action(s)</dt>
+	<dd>Buttons for performing global actions related to this table (add row)</dd>
+</dl>
+
+@subsection sec_tablePartMisc Miscellaneous
+
+<dl>
+	<dt>Table header</dt>
+	<dd>Click to collapse/expand the whole table. Only the header is shown while
+		the table is collapsed. Some tables are automatically collapsed if empty.
+		If that is the case, then it is indicated on the table header and the table
+		cannot be expanded.</dd>
+	<dt>Expand/collapse cell content</dt>
+	<dd>There is a size limit on cell contents and all content past that limit
+		is hidden by default. If that is the case, special marker is shown after
+		the cell content. It can be clicked to either <tt>[+]</tt> expand or
+		<tt>[ - ]</tt> collapse the overflowing content.
+		Table rows can be double-clicked as well, toggling visibility of cell
+		content overflow for all row cells simultaneously.</dd>
+	<dt>Column headers</dt>
+	<dd>Most column headers can be clicked to @ref sec_tablePartSorting "sort table" by the
+		corresponding column.</dd>
+	<dt>Selected rows</dt>
+	<dd>Rows can be selected by clicking on them. Selected rows will be shown even
+		when different table "page" is selected, or if they do not fit active
+		filters.</dd>
+</dl>
+
+
+@section sec_tablePartsEnhancements Enhancements
+
+Following elements do not interact with the rest of the application, only with
+the table itself. It is not necessary to use them, however, they offer convenient
+table adjustment capabilities.
+
+@subsection sec_tablePartSorting Sorting
+
+Table can usually be sorted by most of its columns. To do so, click on column
+header. Click second time on the same header to sort values in descending order
+(ascending order is used by default).
+
+<dl>
+	<dt>Sorting</dt>
+	<dd>Icon showing that the table is currently sorted by this header (and sorting
+		direction - up for ascending, down for descending).</dd>
+</dl>
+
+@subsection sec_tablePartPagination Pagination
+
+For increased comfort, table can be broken into "pages", each of them containing
+set ammount of rows (except for the last one of course).
+
+<dl>
+	<dt>Pagination</dt>
+	<dd>Page number / page count in the middle, surrounded by navigation buttons:
+		<ul>
+			<li>first page</li>
+			<li>5 pages back</li>
+			<li>previous page</li>
+			<li>next page</li>
+			<li>5 pages forward</li>
+			<li>last page</li>
+		</ul>
+		Some buttons may be disabled depending on number of current page and number
+		of pages.
+	</dd>
+	<dt>Page size</dt>
+	<dd>Number of rows per page. Click, enter new number, and press <tt>[Enter]</tt>
+		to change it.</dd>
+</dl>
+
+@subsection sec_tablePartFiltering Filtering
+
+<dl>
+	<dt>Filters</dt>
+	<dd>Click to show/hide filters. Button on the label is the number of currently
+		active filters over the number of all filters (even inactive).</dd>
+	<dt>Remove all filters</dt>
+	<dd>Click to remove all filters.</dd>
+	<dt>Add filter form</dt>
+	<dd>Use to create new filter.</dd>
+	<dt>Active filter</dt>
+	<dd>Click to deactivate it (highlighting style depends on used theme).</dd>
+	<dt>Inactive filter</dt>
+	<dd>Click to activate it.</dd>
+	<dt>Remove filter(s)</dt>
+	<dd>Click to remove corresponding filter(s).</dd>
+</dl>
+
+*/

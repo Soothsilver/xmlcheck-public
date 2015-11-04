@@ -1,0 +1,94 @@
+a[href="#"] {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 0.1em 0 0 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+.ui-panel,
+.ui-table,
+.ui-fieldset,
+.ui-form .ui-form-actions {
+	margin-bottom: 0.5em;
+}
+
+.ui-dialog-content .ui-form .ui-form-actions.ui-helper-clearfix:after {
+	display: none !important;
+}
+
+.content-table>.ui-table {
+	width: 100%;
+}
+
+.privilege-icon {
+	display: inline-block;
+}
+
+.ui-accordion .ui-accordion-content .ui-button {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	text-align: left;
+}
+
+.plugin-output-details {
+	text-align: left;
+	white-space: pre;
+}
+
+.actionIcon {
+	cursor: pointer;
+}
+
+.errorContainer>.ui-panel .actionIcon {
+	float: right;
+	margin-right: 0.3em;
+}
+
+.fakeIcon {
+	display: inline-block;
+	font-weight: bold;
+	height: 16px;
+	text-align: center;
+	width: 16px;
+}
+
+.labeledListSet .listLabel {
+	margin-top: 0.5em;
+}
+
+.labeledListSet .listLabel:first-child {
+	margin-top: 0;
+}
+
+ul.indentedList {
+	padding-left: 1em;
+}
+
+a.compositeLink {
+	text-decoration: none;
+}
+
+a.compositeLink>.ui-icon {
+	margin-bottom: -3px;
+}
+
+a.compositeLink>.linkText {
+	text-decoration: underline;
+}
+a.compositeLink.outLink {
+    font-weight: bold;
+}
+a.compositeLink.outLink:hover {
+    text-decoration: underline;
+}
+.question-row-selected {
+	background-color: #ffff00;
+}

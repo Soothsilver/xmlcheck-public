@@ -1,0 +1,85 @@
+/** @page page_lectures Lecturer
+
+Tutor tasks are located in @mir Lecturer @endmir section of the left menu.
+
+@section sec_lecturerWorkflow Lecturer workflow
+
+"Lecturer" is the teacher responsible for the whole lecture at the university.
+He or she supervises "tutors" (in charge of excercise groups) and creates problems
+to be given to students for homework. He doesn't assign the problems to students,
+that task is delegated to tutors as well as rating of solutions. He can, however,
+select the plugin used for automated correction of those solutions and both
+students and tutors will be able to see correction results.
+
+First thing every lecturer needs to do is to create a new lecture with appropriate
+name and description. Then they can create problems belonging to their lecture.
+For problems using plugins for automated correction, these plugins must be added
+to the application first.
+
+@section sec_lecturerContentPages Content pages
+
+@subsection sec_lecturerPageLectures Lectures
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new lecture</b>
+		<i>(global)</i> [@harr form]</li>
+	<li><span class="icon icon-document">document</span> <b>view problems</b>
+		belonging to this lecture [@rarr @ref sec_lecturerPageProblems]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit lecture</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete lecture</b> [@dialog confirmation]</li>
+</ul>
+
+Lecture names are unique and immutable.
+
+@warning When a lecture is deleted, all associated problems, groups, assignments,
+	and solutions are removed as well.
+
+@subsection sec_lecturerPageProblems Problems
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new problem</b>
+		<i>(global)</i> [@harr form]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit problem</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete problem</b> [@dialog confirmation]</li>
+</ul>
+
+Problem names are unique and immutable.
+
+@warning When a problem is deleted, all associated assignments and solutions are
+	removed as well.
+
+@subsection sec_lecturerPagePlugins Plugins
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>add new plugin</b>
+		<i>(global)</i> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>remove plugin</b> [@dialog confirmation]</li>
+</ul>
+
+Plugin names are unique and immutable.
+
+Plugins cannot be changed once added to the application, but they can be tested
+before being used for correction of students' solutions. It is imperative that
+every added plugin is tested thouroughly (and possibly removed, fixed, and added
+again in case of discovered errors) before being put to use, because when a plugin
+is removed from the application, all associated problems, assignments, and solutions
+are removed as well.
+
+@subsection sec_lecturerPagePluginTests Plugin tests
+
+<ul class="tableActions">
+	<li><span class="icon icon-circle-arrow-n">up arrow</span> <b>download test input</b>
+		[@dialog file download]</li>
+	<li><span class="icon icon-circle-arrow-s">down arrow</span> <b>download test output</b>
+		[@dialog file download]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>remove test</b> [@dialog confirmation]</li>
+</ul>
+
+Tests can be added using the form at the bottom of content area. Tests work just
+like correction of solutions, only instead of feeding geunine solution to the
+plugin, any test input can be supplied. Test results look, not suprisingly, just
+like results of solution correction. If the plugin in question supports arguments,
+these can be supplied as well (they are normally set as part of the problem that
+is using the plugin).
+
+*/

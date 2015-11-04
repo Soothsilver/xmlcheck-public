@@ -1,0 +1,53 @@
+/** @page page_faq Frequently asked questions
+
+This page contains questions that may have been asked frequently, has this
+application been used by anyone except its author.
+
+You are encouraged to ask the @ref sec_author "author" about anything concerning
+the application. Just please try to find the answer in this manual first.
+
+@section sec_howToDoWhatever How do I ... ?
+
+@subsection sec_howToDownload How do I get @projectname?
+
+Download it <a href="@projectwww">here</a>.
+
+@subsection sec_howToBuild How can I build application from sources?
+
+Although the application itself is platform-independent, it currently contains
+a build script only for Windows (until somebody re-writes it as a shell-script :).
+It is called <tt>build.bat</tt> and located in the root folder of application
+sources, and it must be run from that folder. See documentation inside the script
+for its arguments.
+
+@subsection sec_howToRequirements What are the requirements to run @projectname?
+
+See @ref sec_appRequirements "here".
+
+@subsection sec_howToGetUserAccount How can I get my user account?
+
+First you need to @ref sec_studentRegister "register a new user account". Then
+if you need other than a student account, contact application administrator
+requesting account upgrade (e-mail address is shown as 'reply-to' in the account
+activation e-mail).
+
+@subsection sec_howToEditAccount How can I change my password or other account properties?
+
+Select @mir Settings > Account settings @endmir from left menu and fill in the
+form. Note that password must be retyped for every user account change.
+
+@subsection sec_howToHandleErrors Whan should I do if I get some errors?
+
+See @ref sec_errorLog "error log" for error details and report the error together
+with found details to application administrator. Please note that the @projectname
+is a non-profit work of single person. Although some support may be forthcoming,
+it should not be expected and certainly not demanded.
+
+@subsection sec_howToUninstall How do I uninstall @projectname?
+
+Just delete the folder where you "installed" (extracted) the application and
+remove the database used by application from your MySQL server (database name
+is entered during the installation process and can be found in configuration
+file as @c db in section @b database).
+
+*/

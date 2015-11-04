@@ -1,0 +1,16 @@
+body, body.ui-widget {
+	font-size: 12px;
+}
+
+noscript,
+div.browserNotSupported,
+div.loadingApplication {
+	display: block;
+	font-size: 1.5em;
+	left: 25%;
+	line-height: 1.5em;
+	position: absolute;
+	text-align: center;
+	top: 40%;
+	width: 50%;
+}

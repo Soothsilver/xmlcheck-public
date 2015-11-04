@@ -1,0 +1,12 @@
+Vítejte v systému XML Check. Můžete se podívat do <a href="xmlcheck-uzivatelska-dokumentace.pdf">uživatelské dokumentace</a>.
+
+Pokud v systému objevíte chybu, oznamte mi to prosím na <a href="mailto:petrhudecek2010@gmail.com">petrhudecek2010@gmail.com</a>.
+
+Abyste zbytečně neprovokovali systém na kontrolu podobnosti:
+- Nahrávejte jen svá vlastní řešení, nikoliv řešení vašich spolužáků.
+- Nahrávejte jen soubory, které jsou nutné (nenahrávejte např. celé projekty NetBeans).
+
+Abyste viděli domácí úkoly, musíte se nejprve přidat do nějaké skupiny na stránce Student>>Členství.
+
+Děkuji
+Petr Hudeček

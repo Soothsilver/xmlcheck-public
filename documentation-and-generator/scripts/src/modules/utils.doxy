@@ -1,0 +1,14 @@
+/**
+
+@defgroup utils Utilities
+
+Classes and functions with use not limited to or unrelated to main application.
+
+Programming language: <b>PHP</b> \n
+
+This module contains all utility classes and functions that are available not only
+to the @ref core, but to PHP @ref plugins "plugins" and as well.
+Documentation scripts themselves are also included here, as they are not needed
+for application functionality.
+
+*/

@@ -1,0 +1,42 @@
+/**
+ *
+ */
+
+.ui-textCutter.ui-textCutter-hidden .ui-textCutter-overflow,
+.ui-textCutter.ui-textCutter-hidden .ui-textCutter-overflow-text {
+	display: none;
+}
+
+.ui-textCutter .ui-textCutter-ellipsis {
+	display: none;
+}
+
+.ui-textCutter.ui-textCutter-hidden .ui-textCutter-ellipsis {
+	display: inline-block;
+}
+
+.ui-textCutter.ui-textCutter-no-ellipsis .ui-textCutter-ellipsis {
+	display: none;
+}
+
+ui-textCutter .ui-textCutter-toggler {
+	display: inline-block;
+}
+
+.ui-textCutter-no-toggler .ui-textCutter-toggler {
+	display: none;
+}
+
+.ui-textCutter-ellipsis:before {
+	content: '[...]';
+	font-weight: bold;
+}
+
+.ui-textCutter-toggler:before {
+	content: '[ - ]';
+	font-weight: bold;
+}
+
+.ui-textCutter.ui-textCutter-hidden .ui-textCutter-toggler:before {
+	content: '[+]';
+}

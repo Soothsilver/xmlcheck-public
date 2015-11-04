@@ -1,0 +1,5 @@
+[XMLCheck] Student žádá o oznámkování řešení
+
+Student %{RealName} s e-mailem %{Email} odevzdal řešení jednoho ze svých úkolů a chtěl by, aby mu bylo oznámkováno co nejdříve, klidně i před termínem.
+
+Oznámkovat toto řešení můžete na této adrese: %{Link}

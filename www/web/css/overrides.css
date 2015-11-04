@@ -1,0 +1,76 @@
+.ui-on-top {
+	z-index: 99;
+}
+
+.ui-button.ui-no-button {
+	display: none;
+}
+
+.ui-clickable {
+	cursor: pointer;
+}
+
+.ui-virtual-space:before {
+	content: ' ';
+}
+
+.ui-container {
+	position: relative;
+}
+
+.ui-placeholder {
+	display: none;
+}
+
+/* ------------------------------- labels ----------------------------------- */
+
+.ui-labeled-icon,
+.ui-dialog .ui-dialog-titlebar.ui-labeled-icon,
+.ui-dialog .ui-dialog-content.ui-labeled-icon {
+	padding-left: 2.5em;
+	position: relative;
+}
+
+.ui-labeled-icon>.ui-icon:first-child,
+.ui-dialog .ui-dialog-titlebar.ui-labeled-icon>.ui-icon:first-child,
+.ui-dialog .ui-dialog-content.ui-labeled-icon>.ui-icon:first-child {
+	position: absolute;
+	left: 0.5em;
+	/*top: 0.1em;*/
+}
+
+/* ----------------------------- background --------------------------------- */
+
+.ui-background-solid {
+	background-image: none !important;
+}
+
+.ui-background-transparent, .ui-state-default.ui-background-transparent, .ui-state-hover.ui-background-transparent, .ui-state-active.ui-background-transparent {
+	background: transparent !important;
+}
+
+/* ------------------------------- border ----------------------------------- */
+
+.ui-state-none, .ui-border-transparent {
+	border-color: transparent !important;
+}
+
+.ui-border-top-transparent {
+	border-top-color: transparent !important;
+}
+
+.ui-border-right-transparent {
+	border-right-color: transparent !important;
+}
+
+.ui-border-bottom-transparent {
+	border-bottom-color: transparent !important;
+}
+
+.ui-border-left-transparent {
+	border-left-color: transparent !important;
+}
+
+.ui-border-none {
+	border-style: none !important;
+}

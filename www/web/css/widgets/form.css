@@ -1,0 +1,15 @@
+.ui-form .ui-form-actions>button {
+	float: left;
+	margin-right: 0.5em;
+	padding: 0.1em 0.3em 0.15em;
+}
+
+.ui-form .ui-form-actions>button>.ui-button-icon-primary {
+	margin-left: 0.1em;
+}
+
+.ui-form .ui-form-actions>button[type=submit] {
+	float: right;
+	margin-left: 1em;
+	margin-right: 0em;
+}

@@ -1,0 +1,84 @@
+/** @page page_groups Tutor
+
+Tutor tasks are located in @mir Tutor @endmir section of the left menu.
+
+@section sec_tutorWorkflow Tutor workflow
+
+Tutor is a supervisor of one or more excercise groups. First
+thing every tutor needs to do is to create that group in @projectname application.
+Group can be either public or private. Private means that students cannot join
+("subscribe to") the group directly, but must send a "subscription request"
+instead. Only after permission is given are they able to see that group's
+assignments and submit solutions.
+
+Once the group is created, tutor can create assignments belonging to this group,
+which the students in the group will be able to solve. Once the students upload
+(and confirm) their solutions, they can be rated by tutor. Students' names are
+not shown during solution rating for better objectivity. However, students'
+rating totals for owned groups can be viewed in separate table.
+
+The group creator will forever be its owner, i.e. the only
+person allowed to allow or deny subscriptions to that group (if it's private)
+and rate solutions submitted for its assignments.
+
+@section sec_tutorContentPages Content pages
+
+@subsection sec_tutorPageAssignments Assignments
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new assignment</b>
+		<i>(global)</i> [@harr form]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit assignment</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete assignment</b> [@dialog confirmation]</li>
+</ul>
+
+@warning When an assignment is deleted, all associated solutions are removed as well.
+
+@subsection sec_tutorPageGroups Groups
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new group</b> <i>(global)</i> [@harr form]</li>
+	<li><span class="icon icon-calendar">calendar</span> <b>view assignments</b>
+		belonging to this group [@rarr @ref sec_tutorPageAssignments]</li>
+	<li><span class="icon icon-person">person</span> <b>view user rating totals</b>
+		of users in this group [@rarr @ref sec_tutorPageRatings]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit group</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete group</b> [@dialog confirmation]</li>
+</ul>
+
+Group names are unique and immutable. Every group is bound to single lecture from
+the moment of its creation and only problems belonging to that lecture can be
+assigned to students in that group.
+
+@warning When a group is deleted, all associated assignments and solutions are
+	removed as well.
+
+@subsection sec_tutorPageSubmissions Submissions
+
+<ul class="tableActions">
+	<li><span class="icon icon-tag">tag</span> <b>rate solution</b> [@dialog rating form]</li>
+	<li><span class="icon icon-circle-arrow-n">up arrow</span> <b>download solution</b>
+		[@dialog file download]</li>
+	<li><span class="icon icon-circle-arrow-s">down arrow</span> <b>download output</b>
+		of corrective plugin [@dialog file download]</li>
+</ul>
+
+@note Once a solution is rated, its rating cannot be changed.
+
+@subsection sec_tutorPageRatings User ratings
+
+No actions can be performed on this page. Use table row sorting and filtering
+to see only desired users or groups.
+
+@subsection sec_tutorPageRequests Subscription requests
+
+<ul class="tableActions">
+	<li><span class="icon icon-check">tick</span> <b>allow subscription</b></li>
+	<li><span class="icon icon-close">cross</span> <b>deny subscription</b></li>
+</ul>
+
+Students can request subscriptions repeatedly if denied. Contact application
+administrator if a student is repeatedly requesting subscription he is not entitled
+to.
+
+*/

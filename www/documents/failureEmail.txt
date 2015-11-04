@@ -1,0 +1,9 @@
+[XMLCheck] Vaše řešení bylo oznámkováno.
+
+Váš cvičící právě oznámkoval vaše řešení pro úkol "%{Assignment}" v systému XMLCheck. Máte %{Points} z celkových  %{Maximum} možných. Vzhledem k tomu, že se nejedná o největší možný počet bodů, cvičící vám pravděpodobně zanechal slovní ohodnocení, které si můžete přečíst v tomto e-mailu nebo po přihlášení v XMLChecku nebo vám poslal e-mail.
+
+=== Poznámka cvičícího: ===
+%{Explanation}
+=== Konec poznámky cvičícího. ===
+
+Odkaz na všechna vaše řešení: %{Link}

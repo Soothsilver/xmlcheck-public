@@ -1,0 +1,138 @@
+/** @page page_installation Installation and configuration
+
+@section sec_appRequirements Requirements
+
+- Apache web server accessible by all potential users (either from school network,
+	or	from the internet) running PHP 5.3+ with PEAR base (server will need to be
+	correctly configured, see @ref sec_installation)
+- MySQL server with MySQL 5.0.1+
+- standard-compliant web browser (<a href="http://www.mozilla.com/firefox">
+	Mozilla Firefox</a>, <a href="http://www.beautyoftheweb.com/">Internet Explorer
+	9</a>, <a href="http://www.opera.com/download/">Opera</a>, or
+	a webkit-based browser, such as <a href="http://www.google.com/chrome">Google
+	Chrome</a>) with access to abovementioned web server
+
+
+@section sec_installation Installation
+
+Application install (resp. upgrade) is managed by installer script. Use following
+steps to install the application:
+
+-# Extract application files and folders to a web-accessible folder on your computer
+	<sup>*</sup>
+-# Ensure that the Apache web-server is correctly configured (<tt>.htaccess</tt>
+	files are allowed in	application folder and URL rewriting is enabled):
+	@code
+	AccessFileName .htaccess
+	LoadModule rewrite_module /path/to/mod_rewrite.so
+	<Directory /application/folder/path/relative/to/document/root>
+		AllowOverride FileInfo Options=Indexes,FollowSymlinks
+	</Directory>
+	@endcode
+-# Ensure that default timezone is set for PHP CGI and CLI (see
+	<a href="http://php.net/manual/en/configuration.php">runtime configuration
+	of PHP</a>):
+	@code
+	date.timezone = Europe/Prague
+	@endcode
+	(use your timezone, <b>set same values for CGI and CLI</b>).
+-# Install PEAR modules <a href="http://pear.php.net/package/Mail">Mail</a> and
+	<a href="http://pear.php.net/package/Net_SMTP/">Net_SMTP</a> (if they're not
+	already installed) and PECL module <a href="http://pecl.php.net/package/zip">Zip</a>.
+-# Ensure that the user used by Apache can create files and subfolders in
+	<tt>./files</tt><sup>**</sup>, create files in <tt>./core</tt><sup>**</sup>,
+	and write to <tt>.htaccess</tt><sup>**</sup> (see
+	<a href="http://httpd.apache.org/docs/2.2/mod/mpm_common.html#user">
+	Apache manual</a> and documentation of your OS on how to do that).
+-# Access application installer from your web browser at address
+	<tt>%http://WEB_SERVER_ADDRESS/APPLICATION_LOCATION/</tt>,
+	where @c WEB_SERVER_ADDRESS is the address (IP or domain name) of your web server,
+	and @c APPLICATION_LOCATION is the path to folder where you extracted the
+	application relative to 'document root' <sup>***</sup>.
+-# Follow the installer script steps and fill in appropriate data. Entered data
+	are saved to application configuration file (and can be later changed) and are
+	described in @ref sec_configuration section below.
+-# Application will start right after the installer successfully finishes.
+-# Log in as administrator (@c admin / @c admin) and
+	@ref sec_howToEditAccount "change your administrator password".
+-# Congratulations, your application is successfully installed.
+
+\n<sup>*)</sup> inside 'document root' folder of your webserver <sup>***</sup>
+\n<sup>**)</sup> relative to root folder of extracted files
+\n<sup>***)</sup> see your web server documentation
+
+
+@section sec_configuration Configuration
+
+Application is configured using special configuration file <tt>./core/config.ini</tt>,
+which can be opened and edited in any text editor. File has the following structure:
+@code
+; single-line comment (can be added anywhere, will not change application behavior)
+
+[section]
+firstProperty = "value"
+secondProperty = "another value"
+
+[anotherSection]
+firstProperty = "email@address.net"
+otherProperty = "C:/path/to/file.exe"
+@endcode
+Only the property values should be edited, property and section names should @b never
+be changed, neither should properties be moved from their section. Values should
+be enclosed in quotes and any quotes inside should be escaped by backslash.
+Follow the descriptions of individual properties:
+
+<ul>
+	<li>@b database (MySQL server properties)
+		<ul>
+			<li>@c host - server address</li>
+			<li>@c user - username</li>
+			<li>@c pass - password</li>
+			<li>@c db - database name</li>
+		</ul>
+	</li>
+	<li>@b mail
+		<ul>
+			<li>@c host - SMTP server address</li>
+			<li>@c user - @optional username (leave blank for no authentication)</li>
+			<li>@c pass - @optional password</li>
+			<li>@c from - value of @c From e-mail header (must be at least seemingly
+				valid e-mail address for some SMTP servers to accept outgoing e-mails)</li>
+		</ul>
+	</li>
+	<li>@b bin
+		<ul>
+			<li>@c phpCli - path to PHP interpreter for
+				<a href="http://php.net/manual/en/features.commandline.php">running
+				PHP scripts from command-line</a>
+			</li>
+			<li>@c java - path to <a href="http://www.java.com/en/download/index.jsp">
+				Java interpreter</a> for running Java plugins
+			</li>
+		</ul>
+	</li>
+	<li>@b defaults
+		<ul>
+			<li>@c submissionFileName - default name given to uploaded submission files
+				when downloading them</li>
+			<li>@c pluginTestFileName - default name given to uploaded plugin test
+				inpu files when downloading them</li>
+			<li>@c pluginOutputFileName - default name given plugin output files
+				when downlolading them</li>
+		</ul>
+	</li>
+	<li>@b roots
+		<ul>
+			<li>@c web - absolute path of web server document root (with trailing slash)</li>
+			<li>@c app - path to application root folder relative to ^ (without leading
+				slash, with trailing slash)</li>
+		</ul>
+	</li>
+</ul>
+
+Only forward slashes should be used in paths, independently on used operating system.
+
+@warning Do NOT edit any properties below the sign that says "DO NOT CHANGE PROPERTIES BELOW",
+	if you want the application to work properly.
+
+*/

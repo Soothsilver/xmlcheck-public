@@ -1,0 +1,51 @@
+/** @page page_roleSpecific Role-specific manuals
+
+Documentation of application features is divided into four "role-specific manuals",
+each containing group of related tasks, with distribution based on user roles described
+on @ref sec_usersRoles "separate page" of the manual.
+
+- @ref page_administration (users, user types)
+- @ref page_lectures (lectures, plugins, problems)
+- @ref page_groups (groups, assignments, subscription requests, rating solutions)
+- @ref page_student (subscriptions, uploading & confirming solutions)
+
+
+@section sec_roleSpecificHowto How to use the manuals
+
+All "sub-manuals" are structured in the same way. Each of them corresponds to
+single menu section and contains two sections. First section describes typical
+application use by that user role. Second section is divided into sub-sections
+corresponding to individual menu items. All displayed content consists solely
+of tables and forms, both of which are
+designed to be as self-explanatory as possible. There are, therefore, only few
+things to be described, most prominent of them being table actions. Each action
+has an associated icon and no two actions on single content page have the same
+icon, so the descriptions can be pretty simple:
+
+@image html actionManual.screen.png Table actions explained
+
+<dl>
+	<dt>Menu item label</dt>
+	<dd>To be selected from menu to get to described table.</dd>
+	<dt>Table action icons</dt>
+	<dd></dd>
+	<dt>Action descriptions</dt>
+	<dd></dd>
+	<dt>Resulting event descriptions</dt>
+	<dd>Condensed descriptions of events that occur when action buttons are clicked.
+		Icons indicate event type, supporting texts add details. For example,
+		descriptions shown in the figure have following meanings:
+		<ul>
+			<li>[@harr form] - form will be shown in place of the table; table will
+				be shown again after form is submitted</li>
+			<li>[@rarr content reference] - user will be directed to another content
+				page</li>
+			<li>[@dialog confirmation] - confirmation dialog will be shown and the
+				action will be performed only if confirmed</li>
+		</ul>
+	</dd>
+	<dt>Global action flag</dt>
+	<dd>Indicates that the action is "global" (see @ref page_table).</dd>
+</dl>
+
+*/

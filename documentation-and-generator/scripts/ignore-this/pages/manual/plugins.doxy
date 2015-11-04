@@ -1,0 +1,15 @@
+/** @page page_plugins Plugins
+
+@projectname supports plugins for automated correction of problems, which can be
+@ref sec_lecturerPagePlugins "added" using application user interface.
+
+Plugin creation is requires at least elementary programming skills and should
+therefore not be attempted by lecturers inexperienced at programming. No support
+will be provided for lecturers with no programming experience trying to create
+plugins. It is recommended to either delegate the task to someone with appropriate
+skills or not use automatic correction feature.
+
+More information on how to create and add plugins to work with @projectname can
+be found in @ref plugins "developer documentation".
+
+*/

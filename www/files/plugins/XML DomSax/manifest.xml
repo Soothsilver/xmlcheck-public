@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<plugin-manifest>
+	<mainFile>DomSaxPlugin.jar</mainFile>
+    <identifier>DOMSAX</identifier>
+	<type>java</type>
+	<description>
+        Vaše řešení musí mít přesně tuto adresářovou strukturu:
+        /data.xml
+        /dom/user/MyDomTransformer.java
+        /sax/user/MySaxHandler.java
+
+        Vaše třída MyDomTransformer musí mít metodu "public void transform(org.w3c.dom.Document)" která pozmění XML dokument v parametru.
+        Vaše třída MySaxHandler musí dědit od org.xml.sax.helpers.DefaultHandler a musí mít výchozí bezparametrický konstruktor. Její instance bude automaticky vytvořena a předána SAX parseru.
+
+        Vaše úkoly:
+        1. MyDomTransformer provede 2 úpravy XML dokumentu - např. přidání nového zaměstnance se všemi parametry, smazání všech zaměstnanců s platem menším než X, seřazení zaměstnanců podle abecedy, zvýšení platu určitých zaměstnanců apod.
+        2. MySaxHandler spočte a vypíše na konzoli tři zvolené charakteristiky vašich dat, a to tak, že:
+        a) Jedna se bude týkat hodnot atributů (např. spočte průměrnou váhu výrobku)
+        b) Jedna se bude týkat obsahu elementů (např. najde tři nejčastější příjmení zaměstnanců)
+        c) Jedna bude využívat kontext (např. počet zaměstnanců, kteří jsou starší 60 let, ale nemají dovolenou)
+        (Systém automaticky nekontroluje, ale snažte se, aby vaše řešení bylo minimálně tak složité, jako uvedené příklady.)
+
+        Nahrajte jen soubory relevantní k domácímu úkolu! Nenahrávejte celé projekty NetBeans/Eclipse, protože obsahují mnoho různých souborů XML a systém pak může vaše řešení mylně označit za podezřelé z opisování.
+
+        Použijte prosím tyto kostry souborů:
+
+        // dom/user/MyDomTransformer.java
+        package user;
+        import org.w3c.dom.Document;
+        public class MyDomTransformer {
+            public void transform (Document xmlDocument) {
+                // code transforming xmlDocument object
+                // (method works on the object itself - no return value)
+            }
+        }
+
+        // sax/user/MySaxHandler.java
+        package user;
+        import org.xml.sax.helpers.DefaultHandler;
+        public class MySaxHandler extends DefaultHandler {
+            // overrides of DefaultHandler methods
+        }
+	</description>
+	<arguments/>
+</plugin-manifest>

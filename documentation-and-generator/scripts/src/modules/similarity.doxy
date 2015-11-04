@@ -1,0 +1,15 @@
+/**
+@defgroup similarity Similarity Module
+
+The similarity module is an application that checks submissions for plagiarism.
+
+Programming language: <b>Java</b>\n
+Interacts with: <b>the database</b>, <b>the core may call it via command-line</b>
+
+The module contains functions for running similarity checking algorithms on the submissions. It also contains classes
+that handle working with the database for querying for submissions and updating their similarity status. Finally, there
+are a number of classes that handle the procedures for running the similarity checking among appropriate submissions in
+an appropriate order.
+
+See the attached thesis for full documentation of this module.
+*/

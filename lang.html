@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        asm = {};
+        asm.lang = {} ;
+        asm.ui =  {};
+        asm.ui.constants = {};
+        asm.ui.constants.usernameMinLength = 0;
+        asm.ui.constants.usernameMaxLength = 0;
+    </script>
+    <script type="text/javascript" src="www/web/js/lang/lang.js"></script>
+    <script type="text/javascript" src="www/web/js/lang/lang_cs.js"></script>
+
+
+    <script type="text/javascript"> var firstObject = asm.lang;
+    var secondObject = asm.otherlangs.cs;
+    var name = "asm.lang.";
+
+    for (sectionName in firstObject)
+    {
+        if (!secondObject.hasOwnProperty(sectionName))
+        {
+            document.write('Missing section: ' + name + sectionName + "<br>");
+            continue;
+        }
+        for (propertyName in firstObject[sectionName])
+        {
+            if (!secondObject[sectionName].hasOwnProperty(propertyName))
+            {
+                document.write('Missing: ' + name + sectionName + "." + propertyName + "<br>");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+<!--
+
+            /*
+
+        */
+-->
+</body>
+</html>

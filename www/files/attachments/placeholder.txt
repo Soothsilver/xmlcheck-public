@@ -1,0 +1,1 @@
+This folder must be present. This placeholder file exists so the folder is added to version control systems.

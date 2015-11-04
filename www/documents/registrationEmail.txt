@@ -1,0 +1,10 @@
+[XMLCheck] Dokončete registraci
+Registroval jste se pod uživatelským jménem "%{Username}" v aplikaci XML Check.
+
+Pro dokončení registrace zadejte následující aktivační kód do formuláře pro aktivaci:
+
+%{ActivationCode}
+
+Formulář pro aktivaci se nachází na této adrese:
+
+%{Link}

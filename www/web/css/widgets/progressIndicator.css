@@ -1,0 +1,16 @@
+.ui-progressIndicator {
+	font-weight: bold;
+	height: 1em;
+	margin: -1.5em 0 0;
+	padding: 1em 2em 1em 3em;
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	max-width: 20%;
+}
+
+.ui-progressIndicator .ui-progressIndicator-icon {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+}

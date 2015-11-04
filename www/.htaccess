@@ -1,0 +1,20 @@
+# The only purpose of this file is to prevent access to the core/config.ini file and to the "files" directory.
+# If this access was permitted, it would create a security problem.
+
+# Enable rewriting rules
+# Per http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html#rewriteengine, following symlinks must be enabled
+# in order for the rewriting engine to work.
+RewriteEngine on
+Options +FollowSymlinks
+
+# For security purporses, we must prohibit all access to these:
+# core/config.ini, because it contains database credentials
+RewriteRule ^core/config.ini$ - [F]
+# files/attachments/ |
+# files/log/         |
+# files/output/      | because these contain uploaded or generated files from test cases
+# files/submissions/ | of other users
+# files/test/        |
+RewriteRule ^files/.* - [F]
+
+# Allow access to everything else.

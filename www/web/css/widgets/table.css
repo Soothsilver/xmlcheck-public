@@ -1,0 +1,228 @@
+.ui-table {
+	position: relative;
+}
+
+.ui-table>table {
+	border-collapse: collapse;
+	min-width: 100%;
+}
+
+.ui-table.ui-table-collapsed>table thead,
+.ui-table.ui-table-collapsed>table tbody,
+.ui-table.ui-table-collapsed>.ui-table-bottom {
+	display: none;
+}
+
+.ui-table>table caption {
+	height: 1px;
+}
+
+.ui-table.ui-table-collapsed>table caption {
+	height: 2px;
+}
+
+.ui-table.ui-table-with-caption {
+	padding-top: 2.4em;
+}
+
+.ui-table caption .ui-table-caption {
+	display: none;
+}
+
+.ui-table.ui-table-with-caption caption .ui-table-caption {
+	display: block;
+	height: 2.4em;
+	left: 0;
+	line-height: 2.4em;
+	padding: 0 0.5em;
+	position: relative;
+	text-align: left;
+	top: -2.4em;
+}
+
+.ui-table-collapsible caption div.ui-table-caption {
+	cursor: pointer;
+}
+
+.ui-table-autoCollapsed caption div.ui-table-caption {
+	cursor: default;
+}
+
+.ui-table-autoCollapsed caption div.ui-table-caption:after {
+	 content: ' (∅)';
+}
+
+.ui-table-with-caption caption div.ui-icon-label {
+	margin-top: 0.45em;
+}
+
+.ui-table>table thead,
+.ui-table>table tbody,
+.ui-table>table tr,
+.ui-table>table th,
+.ui-table>table td {
+    border: inherit;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+.ui-table>table .ui-table-button-wrapper {
+	position: relative;
+}
+
+.ui-table>table th.ui-button,
+.ui-table>table td.ui-button {
+	display: table-cell;
+	position: static;
+}
+
+.ui-table>table .ui-table-action-field {
+	padding: 0.1em;
+}
+
+.ui-table>table tr {
+	cursor: default;
+}
+
+.ui-table>table tr.ui-table-hidden {
+	display: none;
+}
+
+.ui-table>table tr.ui-selected,
+.ui-table.ui-table-simple>table tr.ui-table-hidden {
+	display: table-row;
+}
+
+.ui-table>table th, .ui-table>table td {
+	line-height: 1.5em;
+}
+
+.ui-table>table th {
+	padding: 0 0.4em;
+}
+
+.ui-table>table td {
+	padding: 0.4em 0.6em;
+}
+
+.ui-table>table td.ui-table-field-string {
+	text-align: left;
+	white-space: pre-line;
+}
+
+.ui-table>table th.ui-table-field-hidden,
+.ui-table>table td.ui-table-field-hidden {
+	display: none;
+}
+
+.ui-table-field-wrapper {
+	position: relative;
+	padding: 0.4em;
+}
+
+.ui-table-overflow-toggler {
+	bottom: 0px;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	width: 16px;
+}
+
+.ui-table-bottom {
+	border-top-style: none;
+	padding: 1px 0;
+	position: relative;
+}
+
+.ui-table-simple .ui-table-bottom {
+	display: none;
+}
+
+.ui-table-bottom .ui-table-bottom-left, .ui-table-bottom .ui-table-bottom-right {
+	line-height: 1.5em;
+	position: relative;
+}
+
+.ui-table-bottom .ui-table-bottom-right {
+	float: right;
+}
+
+.ui-table-bottom .ui-table-bottom-left {
+	float: left;
+	margin: 1px 0.5em 0;
+}
+
+input.ui-table-rpp {
+	min-height: 1.7em;
+	text-align: center;
+	width: 2em;
+}
+
+.ui-table-navigation {
+	text-align: center;
+}
+
+.ui-table-page {
+	padding: 0 1.2em;
+	cursor: default;
+}
+
+.ui-table-bottom .ui-button>.ui-button-text {
+	padding-bottom: 0.15em;
+	padding-top: 0.25em;
+}
+
+.ui-table-navigation .ui-button>.ui-button-text {
+	width: 2em;
+}
+
+.ui-table-filters-buttons.ui-buttonset {
+	margin-right: 2px;
+}
+
+.ui-table-filters {
+	bottom: -1px;
+	clear: both;
+	margin-top: 1px;
+	position: relative;
+}
+
+.ui-table-filter-form, .ui-table-filter-add {
+	float: right;
+}
+
+.ui-table-filter-form {
+	margin-right: -6px;
+}
+
+.ui-table-filter-add {
+	margin-right: 0;
+}
+
+.ui-table-filter-form-inputs {
+	display: inline-block;
+	margin-right: -1px;
+	padding: 0.2em 0 0.2em 0.2em;
+	vertical-align: top;
+	height: 1.4em;
+}
+
+.ui-table-filter-form-inputs input, .ui-table-filter-form-inputs select {
+	background: none;
+	border: none;
+	color: inherit;
+	font-weight: bold;
+	height: 1.45em;
+	margin-right: 0.1em;
+}
+
+.ui-table-filter {
+	float: left;
+	margin-right: 0.1em;
+}
+
+tr.ui-table-filtered {
+	display: none;
+}

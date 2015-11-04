@@ -1,0 +1,39 @@
+/** @page page_form Form element
+
+Form element is used to provide means for adding or editing application entities
+(users, lectures, plugins, assignments, etc).
+
+@image html form.screen.png Form element
+
+<dl>
+	<dt>Field set header</dt>
+	<dd>Form contains one or more groups of fields (a.k.a. field sets). Headers
+		usually contain both icon and label to provide strong visual link to entity
+		type currently being added or edited.</dd>
+	<dt>Field labels</dt>
+	<dd>Labels describe purpose of individual fields and can be clicked to focus
+		corresponding fields.</dd>
+	<dt>Fields</dt>
+	<dd>Static or editable fields. Disabled and non-editable fields are visually
+		distinguished depending on used theme.</dd>
+	<dt>Hints</dt>
+	<dd>These may be one of the following:
+		<ul>
+			<li>hint text (if the field value hasn't been changed yet, or if it
+				is currently being changed; may be empty)</li>
+			<li>error text (if the current field value is incorrect)</li>
+			<li>"check" icon (if the field value has been changed and is correct)</li>
+		</ul>
+		Hint is changed whenever the form receives notification about the field value
+		change. This usually happens when the field loses focus.
+	</dd>
+	<dt>Field with invalid value</dt>
+	<dd>Incorrectly filled fields are very clearly highlighted.</dd>
+	<dt>Focused field</dt>
+	<dd>Focused field is always highlighted.</dd>
+	<dt>Submit button</dt>
+	<dd>Click to submit data (enabled only if all field values are correct).</dd>
+</dl>
+
+
+*/

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes" ?>
+<plugin-manifest>
+	<mainFile>XsltChecker.php</mainFile>
+    <identifier>XSLT</identifier>
+	<type>php</type>
+	<description>
+		Řešení musí obsahovat jeden .xml soubor a jeden .xsl soubor, volitelně také .dtd soubor.
+        Oba soubory musí být správně zformované XML a XSL soubor musí být validní XSLT skript.
+
+        Používejte pouze XML 1.0 a XSLT 1.0. (Doporučení: Nastavte si ve vašem editoru, ať používá XSLT 1.0 a zabrání vám tak v použití pokročilých, v XMLChecku nedostupných, funkcí.)
+
+        XSLT soubor musí obsahovat:
+        a) Alespoň 5 šablon xsl:template
+        b) Alespoň 5 volání typu xsl:apply-template nebo xsl:call-template
+        c) xsl:template/@name
+        d) xsl:template/@match
+        e) xsl:apply-templates/@mode
+        f) Jedno z následujících:  xsl:choose nebo xsl:if
+        g) xsl:for-each
+        h) xsl:variable
+        i) xsl:param a xsl:with-param
+        j) Jedno z následujících: xsl:element, xsl:attribute, xsl:value-of nebo xsl:text
+        k) Jedno z následujících: xsl:copy nebo xsl:copy-of
+
+        V XSL souboru používejte hojně komentáře, které budou vysvětlovat, co která operace znamená a co je jejím výsledkem.
+
+        Výstupním formátem musí být XML nebo HTML (nikoliv XHTML).
+        Kromě toho by měla šablona být dostatečně komplexní.
+	</description>
+	<arguments>
+		<argument>Minimální počet xsl:template a (xsl:call-template nebo xsl:apply-templates)</argument>
+	</arguments>
+</plugin-manifest>

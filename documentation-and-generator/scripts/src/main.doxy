@@ -1,0 +1,32 @@
+/**
+@mainpage Dokumentace systému XML Check
+
+@section sec_projectDescription Popis projektu
+
+XML Check je webová aplikace pro správu domácích úkolů. Student nahraje řešení domácího úkolu, systém ho částečně zkontroluje, zobrazí studentovi výsledky a student má možnost se opravit. Po termínu odevzdání pak učitel zkontroluje všechna odevzdaná řešení ručně a přidělí studentům body.
+
+XMLCheck je rozšiřitelný systém, ovšem využívá se nyní pouze v předmětu Technologie XML na Matematicko-fyzikální fakultě
+Univerzity Karlovy v Praze a na Fakultě elektrotechnické Českého vysokého učení technického v Praze.
+
+Podrobnou programátorskou dokumentaci najdete v bakalářských pracích přiložených k tomuto projektu.
+
+_Toto není uživatelská dokumentace!_ Uživatelskou dokumentaci najdete přiloženou k tomuto projektu.
+
+@section sec_projectParts Moduly
+
+V této vygenerované dokumentaci tříd najdete všechny součásti projektu bez ohledu na programovací jazyk, v němž jsou napsány.
+Pro přehlednost jsou součásti tříděny do modulů.
+
+@section sec_author Autoři
+Původní verzi aplikace vytvořil v roce 2011 <a href="mailto:jjkon@seznam.cz">Jan Konopásek</a>, vývojář webových
+aplikací a student zmíněné Matematicko-fyzikální fakulty Univerzity Karlovy v Praze. V letech 2014 a 2015 převzal vývoj
+aplikace <a href="mailto:petrhudecek2010@gmail.com">Petr Hudeček</a>, z též fakulty.
+
+Systém byl vytvářen v rámci bakalářských prací obou autorů.
+
+@section sec_language Jazyk dokumentace
+Tato úvodní stránka a také průvodní programátorská dokumentace v přiložené bakalářské práci jsou napsány v češtině pro
+co největší srozumitelnost. Ve zdrojovém kódu samotném je ovšem dobrým zvykem psát dokumentační komentáře v angličtině,
+a tedy popisy jednotlivých tříd a metod jsou v angličtině.
+
+*/

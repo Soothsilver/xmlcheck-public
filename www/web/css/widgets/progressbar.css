@@ -1,0 +1,23 @@
+.ui-progressbar {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-size: 1em;
+	line-height: 2em;
+}
+
+.ui-progressbar, .ui-progressbar-fill {
+	text-align: center;
+	font-weight:  bold;
+}
+
+.ui-progressbar-mask, .ui-progressbar-fill {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: inherit;
+	width: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}

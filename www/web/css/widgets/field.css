@@ -1,0 +1,200 @@
+.ui-field {
+	border: 1px solid transparent;
+	clear: both;
+	line-height: 1.5em;
+	margin: -1px;
+	padding: 0.2em 0.9em;
+	position: relative;
+}
+
+.ui-field>.ui-field-label,
+.ui-field>.ui-field-input,
+.ui-field>.ui-field-help {
+	display: block;
+	float:left;
+	position: relative;
+}
+
+.ui-field>.ui-field-label {
+	width: 20%;
+}
+
+.ui-field>.ui-field-input {
+	width: 30%;
+}
+
+.ui-field>.ui-field-help {
+	width: 50%;
+}
+
+.ui-field.ui-field-simple>.ui-field-label {
+	width: 40%;
+}
+
+.ui-field.ui-field-simple>.ui-field-input {
+	width: 60%;
+}
+
+.ui-field.ui-field-type-info>.ui-field-input {
+	width: 80%;
+}
+
+.ui-field.ui-field-type-textarea>.ui-field-input {
+	width: 60%;
+}
+
+.ui-field.ui-field-type-textarea>.ui-field-help {
+	width: 20%;
+}
+
+.ui-field.ui-field-simple>.ui-field-help,
+.ui-field.ui-field-type-info>.ui-field-help {
+	display: none;
+}
+
+.ui-field>.ui-field-label label,
+.ui-field>.ui-field-help .ui-field-help-text {
+	border: 1px solid transparent;
+	padding: 0.2em 0;
+}
+
+.ui-field>.ui-field-label label {
+	display: block;
+	font-weight: bold;
+}
+
+.ui-field>.ui-field-label label:after {
+	content: ':';
+}
+
+.ui-field>.ui-field-input [disabled] {
+	opacity: 0.8;
+}
+
+.ui-field>.ui-field-input .ui-field-input-info {
+	white-space: pre-line;
+}
+
+.ui-field>.ui-field-input input[type="text"],
+.ui-field>.ui-field-input input[type="password"],
+.ui-field>.ui-field-input textarea {
+	width: 96%;
+}
+
+.ui-field>.ui-field-input input[type="text"],
+.ui-field>.ui-field-input input[type="password"],
+.ui-field>.ui-field-input .ui-field-file-overlay-text {
+	height: 1.5em;
+	padding: 0.2em 0.3em;
+}
+
+.ui-field>.ui-field-input textarea {
+	height: 10em;
+	padding: 0.15em 0.3em;
+	resize: vertical;
+}
+
+.ui-field>.ui-field-input select {
+	width: 100%;
+	padding: 0.15em 0.2em 0.15em 0.1em;
+}
+
+.ui-field>.ui-field-input input[type="checkbox"],
+.ui-field>.ui-field-input input[type="radio"]{
+	margin-right: 0.5em;
+	position: relative;
+	top: 2px;
+}
+
+.ui-field.ui-fancy>.ui-field-input input[type="checkbox"],
+.ui-field.ui-fancy>.ui-field-input input[type="radio"] {
+	position: absolute;
+}
+
+.ui-field.ui-field-type-checkbox>.ui-field-input input[type="checkbox"] {
+	left: 1px;
+	margin-top: 0.2em;
+	top: 3px;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input input[type="file"] {
+	opacity: 0;
+	z-index: 2;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay,
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-text,
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-button {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay {
+	width: 100%;
+	max-width: 17em;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-text,
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-button {
+	padding: 0.2em;
+	height: 1.45em;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-text {
+	width: 78%;
+	overflow: hidden;
+}
+
+.ui-field.ui-field-type-file>.ui-field-input .ui-field-file-overlay-button {
+	left: 84%;
+	padding-left: 3%;
+	width: 11%;
+}
+
+.ui-field>.ui-field-input .ui-field-line:first-child {
+	padding-top: 0.2em;
+}
+
+.ui-field.ui-fancy>.ui-field-input .ui-field-line {
+	float: left;
+	padding-top: 0;
+}
+
+.ui-field.ui-fancy>.ui-field-input .ui-field-line:first-child .ui-button {
+	margin-left: -1px;
+}
+
+.ui-field>.ui-field-help .ui-field-help-text {
+	margin-left: 0.7em;
+}
+
+.ui-field>.ui-field-help .ui-icon {
+	margin-left: 0.6em;
+}
+
+.ui-field.ui-field-type-textarea>.ui-field-help .ui-field-help-text,
+.ui-field.ui-field-type-textarea>.ui-field-help .ui-icon {
+	margin-left: 0;
+}
+
+.ui-field>.ui-field-help .ui-icon {
+	margin-top: 0.1em;
+}
+
+.ui-field>.ui-field-help .ui-field-hint {
+	opacity: 0.9;
+}
+
+.ui-field>.ui-field-help .ui-field-hint:before {
+	/*content: '(';*/
+}
+
+.ui-field>.ui-field-help .ui-field-hint:after {
+	/*content: ')';*/
+}
+
+.ui-field.ui-state-error>.ui-field-help {
+	font-weight: bold;
+}

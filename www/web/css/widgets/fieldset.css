@@ -1,0 +1,43 @@
+.ui-fieldset-wrapper.ui-fieldset-with-legend {
+	padding-top: 2.4em;
+}
+
+.ui-fieldset {
+	padding: 0.1em 0 0.5em;
+	position: relative;
+}
+
+.ui-fieldset fieldset {
+	width: 100%;
+}
+
+.ui-fieldset legend {
+	display: none;
+	height: 1px;
+}
+
+.ui-fieldset-wrapper.ui-fieldset-with-legend .ui-fieldset legend {
+	display: block;
+}
+
+.ui-fieldset legend .ui-fieldset-header {
+	display: block;
+	height: 2.4em;
+	line-height: 2.4em;
+	margin: 0 0 0 -1px;
+	position: absolute;
+	top: -2.4em;
+	width: 100%;
+}
+
+.ui-fieldset legend .ui-fieldset-header>* {
+	margin-left: 0.9em;
+}
+
+.ui-fieldset legend .ui-fieldset-header>.ui-icon:first-child {
+	margin: 0.45em -0.6em 0 0.5em;
+}
+
+.ui-fieldset fieldset .ui-field {
+	margin-top: 0.2em;
+}

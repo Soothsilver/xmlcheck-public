@@ -1,0 +1,53 @@
+/**
+
+@defgroup ui User interface
+
+User interface is the client-side portion of ht project. It displays the webpage and communicates with the server.
+
+Programming language: <b>JavaScript</b> \n
+Interacts with: <b>@ref core</b> \n
+
+@section sec_uiBehavior Behavior
+
+User interface (UI) is a separate part of @projectname. It is a JavaScript application,
+that runs in web browser and communicates with @ref core using HTTP POST and GET
+requests containing JSON-encoded data.
+
+Data is presented to user using a combination of tables and forms with enhanced
+functionality.
+
+@section sec_uiTasks Tasks
+
+@subsection sec_uiPresentation Data and interactive elements presentation
+
+Accessible data is presented to the user mostly using just two presentation elements -
+table and form. Tables are used to display data for easy exploration and simple
+interaction, forms are used for more complicated interaction (usually with single
+item). Both elements are enhanced so that they fulfill their roles completely and
+without the need of any support elements.
+
+@subsection sec_uiNavigation Transparent navigation
+
+Web application runs in a web browser and therefore some basic behavior is expected
+of it, such as support of "Back" and "Forward" browser buttons. This is achieved
+by using the hash part of page url to navigate between pages. There is always just one content
+area displayed, therefore the hash directly identifies the content to be shown. This
+gives an additional benefit of being able to bookmark a specific page.
+
+@subsection sec_uiUserSessions User session management
+
+User session management in UI reflects @ref core functionality. User session is
+started on login and user activity is periodically checked to determine whether to
+send a session refresh request to core, or whether to log the user off. (User activity
+means mouse movement in this context.) If the user is inactive for too long, he or she
+is automatically logged off and all cached data is purged to prevent other users from accessing it.
+
+@subsection sec_uiPrivileges Usertype-based functionality restriction
+
+Content shown to the user after login depends on the type of his or her user account, so that
+the user can see and access only those parts of the application he or she is allowed to
+interact with. This means that for two different users the application may look
+and feel different, and even for one user the behavior can change in time, provided
+that somebody changes his or her privileges.
+
+*/

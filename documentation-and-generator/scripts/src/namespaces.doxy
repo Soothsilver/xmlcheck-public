@@ -1,0 +1,57 @@
+/**
+
+@namespace asm
+Base namespace for the whole project (apart from UI widgets).
+Only classes not contained in this namespace are classes of individual PHP plugins
+and pseudo-classes of widgets constructed using jQuery widget factory. The latter
+are contained in their own @ref ui namespace. In addition, individual Java plugins
+are also excluded from this namespace, as is the similarity checking module and the
+Soothsilver DTD Parser.
+
+@namespace asm::core
+@ingroup core
+Contains all classes making up the server-side portion of the system. All of these classes are programmed in PHP.
+
+@namespace asm::plugin
+@ingroup plugins
+Contains base classes for PHP plugin development. These shouldn't be included in individual plugins, as they
+are available to the application core on plugin launch. The source code of these classes closely matches the Java
+classes in the package name.hon2a.asm.
+
+@namespace asm::ui
+@ingroup ui
+Contains all classes making up the client-side portion of the system. All of these classes are programmed in Javascript.
+
+@namespace asm::ui::editor
+@ingroup ui
+Contains content classes descended from DynamicTableEditor.
+
+@namespace asm::ui::form
+@ingroup ui
+Contains content classes descended from DynamicForm.
+
+@namespace asm::ui::panel
+@ingroup ui
+Contains all content classes not contained in @ref asm::ui::editor, @ref asm::ui::form,
+or @ref asm::ui::table.
+
+@namespace asm::ui::table
+@ingroup ui
+Contains content classes descended from DynamicTable.
+
+@namespace asm::utils
+@ingroup core
+Contains PHP utility classes that are not bound in scope to this project, yet are used by the core.
+Plugins programmed in PHP may also use them.
+
+@namespace widget
+@ingroup ui
+This is a virtual namespace for widgets created using jQuery widget factory.
+These are not real classes although shown as such for documentation purposes.
+Widgets are called on jQuerySel as methods and enhance visual properties and/or
+behavior of contained set of elements. See
+<a href="http://wiki.jqueryui.com/w/page/12138135/Widget-factory">jQuery widget
+factory documentation</a> and <a href="http://jqueryui.com/demos/">jQuery widget
+documentation</a> for better understanding of jQuery widgets.
+
+*/

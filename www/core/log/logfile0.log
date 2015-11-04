@@ -1,0 +1,56 @@
+
+
+2014-11-27 23:04:17 User soothsilver, IP 127.0.0.1, host [no lookup], request GetMotd
+Fatal Error: file_get_contents(motd.txt): failed to open stream: No such file or directory (GetMotd.php:10) causes Runtime error with details #0 [unknown location] asm\utils\ErrorHandler->handleError(2, 'file_get_contents(motd.txt): failed to open stream: No such file or directory', 'C:\\Apps\\EasyPHP\\data\\localweb\\xmlcheck\\www\\core\\core\\scripts\\GetMotd.php', 10, array())
+#1 GetMotd.php:10 file_get_contents('motd.txt')
+#2 UiScript.php:53 asm\core\GetMotd->body()
+#3 Core.php:279 asm\core\UiScript->run(array(), array())
+#4 request.php:40 asm\core\Core::handleUiRequest(array('action' => 'GetMotd'), array())
+
+2014-11-27 23:31:17 User soothsilver, IP 127.0.0.1, host [no lookup], request GetMotd
+Fatal Error: file_get_contents(motd.txt): failed to open stream: No such file or directory (GetMotd.php:10) causes Runtime error with details #0 [unknown location] asm\utils\ErrorHandler->handleError(2, 'file_get_contents(motd.txt): failed to open stream: No such file or directory', 'C:\\Apps\\EasyPHP\\data\\localweb\\xmlcheck\\www\\core\\core\\scripts\\GetMotd.php', 10, array())
+#1 GetMotd.php:10 file_get_contents('motd.txt')
+#2 UiScript.php:53 asm\core\GetMotd->body()
+#3 Core.php:279 asm\core\UiScript->run(array(), array())
+#4 request.php:40 asm\core\Core::handleUiRequest(array('action' => 'GetMotd'), array())
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request RefreshSession
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request GetMotd
+Fatal Error: file_get_contents(motd.txt): failed to open stream: No such file or directory (GetMotd.php:10) causes Runtime error with details #0 [unknown location] asm\utils\ErrorHandler->handleError(2, 'file_get_contents(motd.txt): failed to open stream: No such file or directory', 'C:\\Apps\\EasyPHP\\data\\localweb\\xmlcheck\\www\\core\\core\\scripts\\GetMotd.php', 10, array())
+#1 GetMotd.php:10 file_get_contents('motd.txt')
+#2 UiScript.php:53 asm\core\GetMotd->body()
+#3 Core.php:279 asm\core\UiScript->run(array(), array())
+#4 request.php:40 asm\core\Core::handleUiRequest(array('action' => 'GetMotd'), array())
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request GetRatingSums
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request GetStudentAssignments
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request GetTeacherSubmissions
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:37:22 User [not logged in], IP 127.0.0.1, host [no lookup], request GetSubscriptionRequests
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:39:52 User [not logged in], IP 127.0.0.1, host [no lookup], request GetMotd
+Fatal Error: file_get_contents(motd.txt): failed to open stream: No such file or directory (GetMotd.php:10) causes Runtime error with details #0 [unknown location] asm\utils\ErrorHandler->handleError(2, 'file_get_contents(motd.txt): failed to open stream: No such file or directory', 'C:\\Apps\\EasyPHP\\data\\localweb\\xmlcheck\\www\\core\\core\\scripts\\GetMotd.php', 10, array())
+#1 GetMotd.php:10 file_get_contents('motd.txt')
+#2 UiScript.php:53 asm\core\GetMotd->body()
+#3 Core.php:279 asm\core\UiScript->run(array(), array())
+#4 request.php:40 asm\core\Core::handleUiRequest(array('action' => 'GetMotd'), array())
+
+2014-11-27 23:39:52 User [not logged in], IP 127.0.0.1, host [no lookup], request GetRatingSums
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:39:52 User [not logged in], IP 127.0.0.1, host [no lookup], request GetStudentAssignments
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:39:52 User [not logged in], IP 127.0.0.1, host [no lookup], request GetTeacherSubmissions
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 
+
+2014-11-27 23:39:52 User [not logged in], IP 127.0.0.1, host [no lookup], request GetSubscriptionRequests
+Error: Vaše relace již není platná. Možná jste byli příliš dlouho neaktivní nebo byl program aktualizován na vyšší verzi. Odhlaste se, obnovte stránku (Ctrl+F5) a znovu se přihlaste. causes  with details 

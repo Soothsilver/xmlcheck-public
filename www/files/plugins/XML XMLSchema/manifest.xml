@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<plugin-manifest>
+	<mainFile>XmlSchemaChecker.php</mainFile>
+    <identifier>SCHEMA</identifier>
+	<type>php</type>
+	<description>
+        Řešení musí obsahovat jeden soubor s příponou .xml a jeden soubor s příponou .xsd, volitelně také nějaký DTD soubor.
+        Oba soubory musí být správně zformované XML soubory a XML soubor musí být validní oproti XSD souboru.
+        XML soubor se musí na své schéma odkazovat pomocí atributu noNamespaceSchemaLocation nebo schemaLocation ve jmenném prostoru http://www.w3.org/2001/XMLSchema-instance.
+
+        Používejte pouze prvky XMLSchema 1.0, jmenovitě tedy žádný assert.
+
+        Dále je třeba:
+        1. Použít jednoduché typy (tj. nějaký element nebo atribut musí mít předdefinovaný nebo jednoduchý typ)
+        2. Použít komplexní typy (tj. nějaký element musí používat vámi nadefinovaný komplexní typ)
+        3. Nadefinovat omezení na počet (tj. atribut minOccurs nebo maxOccurs na nějakém elementu)
+        4. Nadefinovat volitelný atribut (tj. use="optional" nebo use vynechat)
+        5. Nadefinovat jednoduchý typ a použít ho v elementu nebo v atributu
+        6. Nadefinovat typ s atributy (tj. simpleContent uvnitř complexType, uvnitř nějž je definován atribut)
+        7. Nadefinovat a použít globálně definovaný element, atribut nebo typ
+        8. Nadefinovat lokální typ (tj. použít simpleType nebo complexType jinde, než na nejvyšší hladině)
+        9. Nadefinovat globální komplexní typ (tj. nějaký element se musí pomocí "type" odkazovat na nějaký complexType na nejvyšší hladině)
+        10. Použít reference (tj. atribut "ref" u elementu, skupiny, atributu nebo skupiny atributů)
+        11. Použít typovou dědičnost (tj. použít "extension" nebo "restriction")
+        12. Použít unique, key nebo keyref.
+	</description>
+	<arguments />
+</plugin-manifest>

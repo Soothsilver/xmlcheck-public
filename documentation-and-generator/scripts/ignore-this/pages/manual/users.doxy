@@ -1,0 +1,27 @@
+/** @page page_users User roles
+
+@section sec_usersUserTypes User types
+
+User account is needed to access any and all application features. Every user
+account belongs to single user type with defined set of privileges. These limit
+the application features users can access and therefore define their role in the
+system. Custom user types can be created and modified, thus leaving distribution
+of user roles completely in the hands of application administrator (with two
+exceptions, see @ref page_administration).
+
+@section sec_usersRoles Roles
+
+Application starts with four predefined user types (apart from special root type)
+@c STUDENT, @c administrator, @c lecturer, and @c tutor. These user types have
+associated privileges reflecting the intended use of the application. They are
+also used in this manual and referred to as <b>user roles</b>. Features available
+to (or tasks performed by) individual roles are best described in following
+figure.
+
+@image html application.ucase.png "Predefined user roles"
+
+Task distribution described above is also used in this manual - it contains
+separate page for every user role (@ref page_administration "administrator",
+@ref page_lectures "lecturer", @ref page_groups "tutor", @ref page_student "student").
+
+*/

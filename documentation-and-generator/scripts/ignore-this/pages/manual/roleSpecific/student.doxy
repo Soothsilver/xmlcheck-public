@@ -1,0 +1,73 @@
+/** @page page_student Student
+
+Student tasks are located in @mir Student @endmir section of the left menu.
+
+@section sec_studentRegister Account registration
+
+Student accounts doesn't have to be created by @ref page_administration "administrators"
+like other accounts. Instead, students can register an account directly by clicking
+Register button on login screen and filling out the registration form. Such account
+is inactive at first (cannot be used) and needs to be activated by special code
+generated for that purpose and send by e-mail, which means that users need to
+provide valid e-mail address when registering. After the account is activated,
+it can be used to full extent of student account permissions.
+
+@section sec_studentWorkflow Student workflow
+
+The first thing every student needs to do is to subscribe to at least one excercise
+group. Groups can be public or private. If the group is private, then the student
+will be subscribed only after the group tutor allows the subscription, otherwise
+the subscription is instantaneous.
+
+When subscribed to excercise groups, students can view and upload solutions for
+all assignments in those groups. Uploaded solutions are immediately corrected
+by corrective plugins (if the solved problems use automatic correction). Students
+can then view correction results and decide whether to confirm or delete their
+solutions. Once confirmed, the solutions cannot be deleted and can be rated by
+group tutors.
+
+Solution rating totals for subscribed groups are displayed on the
+@ref sec_uiLayoutHome "home page".
+
+@section sec_studentContentPages Content pages
+
+@subsection sec_studentPageAssignments Assignments
+
+<ul class="tableActions">
+	<li><span class="icon icon-document">document</span> <b>view assignment
+		details and solution upload form</b> [@rarr form @rarr @ref sec_studentPageSubmissions]</li>
+</ul>
+
+Once a solution for an assignment is confirmed, no other solutions may be uploaded
+for that assignment.
+
+@subsection sec_studentPageSubmissions Submissions
+
+<ul class="tableActions">
+	<li><span class="icon icon-circle-arrow-s">down arrow</span> <b>download output</b>
+		from corrective plugin [@dialog file download]</li>
+	<li><span class="icon icon-check">tick</span> <b>confirm solution</b></li>
+	<li><span class="icon icon-trash">trash can</span> <b>remove solution</b>
+		[@dialog confirmation]</li>
+</ul>
+
+Zero point ratings don't mean anything while the submission status is @c confirmed
+(group tutor just haven't rated the solution yet). When the solution has been
+rated, its status changes to @c rated.
+
+@subsection sec_studentPageSubscriptions Subscriptions
+
+<ul class="tableActions">
+	<li><span class="icon icon-close">cross</span> <b>cancel subscription</b>
+		(leave group)</li>
+	<li><span class="icon icon-plus">plus</span> <b>add/request subscription</b>
+		([request to] join group)</li>
+</ul>
+
+Subscriptions can be canceled even if they have been requested and haven't been
+permitted yet.
+
+@warning When a subscription is canceled, all solutions submitted for that group's
+	assignments are deleted.
+
+*/

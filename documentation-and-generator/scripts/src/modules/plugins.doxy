@@ -1,0 +1,71 @@
+/**
+
+@defgroup plugins Plugins
+
+Plugins for automatic correction of submitted solutions.
+
+Programming language: <b>PHP, Java</b> \n
+Interacts with: <b>@ref core</b> \n
+
+Plugins are separate scripts, each used for automatic evaluation of student solutions
+to a specific problem. This module consists of three parts:
+
+- PHP plugin development framework;
+- Java plugin development framework;
+- Finished plugins.
+
+@section sec_pluginsPhpFramework Plugin frameworks
+
+Structure of the PHP plugin framework is very similar to that of the Java
+plugin framework. For PHP, all classes are contained in the @ref asm::plugin namespace, where as for Java,
+they are in the @ref name::hon2a::asm namespace.
+
+@section sec_pluginsFinished Finished plugins
+
+There are six plugins bundled with @projectname, all of them used for evaluation
+of homework for the lecture XML Technologies of the Faculty of Mathematics and Physics
+at Charles University in Prague. Four of them are written in PHP and two of them are written in Java.
+
+The task descriptions given to students may be found in the attached thesis and in the plugins themselves.
+
+@section sec_pluginsFormatting Plugin format
+
+Plugins must have a specific format to work.
+All plugin files must be compressed in a single ZIP archive together with a special
+"manifest" file described @ref sec_pluginsManifest "below". Plugins will be unpacked automatically
+when the plugins are added in the user interface, and launched using the information contained
+in the manifest. Folder structure of the packed files will be preserved. Plugins will
+not be added to the application if the manifest file isn't well-formed or doesn't
+contain required data.
+
+@subsection sec_pluginsManifest Plugin manifest
+
+The plugin manifest is an XML file named <tt>manifest.xml</tt> and located in the plugin
+root folder (at the root level of ZIP archive, not in any subfolder). It has to
+have the following format:
+
+@code
+<?xml version="1.0" standalone="yes"?>
+<plugin-manifest>
+	<mainFile>MAIN_FILE_PATH</mainFile>
+	<type>TYPE</type>
+	<identifier>IDENTIFIER</identifier>
+	<description>DESCRIPTION</description>
+	<arguments>
+		<argument>ARGUMENT_DESCRIPTION</argument>
+		... <!-- more arguments -->
+	</arguments>
+</plugin-manifest>
+@endcode
+
+where
+- @c TYPE is plugin type (@c php for PHP plugin scripts, @c java for Java Archive,
+	or @c exe for binary executable),
+- @c MAIN_FILE_PATH is path to main plugin file relative to plugin root,
+- @c DESCRIPTION is plugin description (names and specifications of required input
+	files, etc.),
+- <tt>\<arguments\></tt> tag is optional, and @c ARGUMENT_DESCRIPTION is a short
+	string with argument description,
+- @c IDENTIFIER is a unique string. This identifier may be used by the similarity checking module
+
+*/

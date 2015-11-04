@@ -1,0 +1,154 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UserEmailOptions
+ *
+ * @ORM\Table(name="user_email_options")
+ * @ORM\Entity
+ */
+class UserEmailOptions
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="send_email_on_submission_rated", type="boolean", nullable=false)
+     */
+    private $sendEmailOnSubmissionRated = '1';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="send_email_on_new_assignment", type="boolean", nullable=false)
+     */
+    private $sendEmailOnNewAssignment = '1';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="send_email_on_new_submission", type="boolean", nullable=false)
+     */
+    private $sendEmailOnNewSubmission = '1';
+
+    /**
+     * @var integer
+     * @ORM\Id
+     * @ORM\Column(name="userId", type="integer", nullable=false)
+     */
+    private $userid;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set sendEmailOnSubmissionRated
+     *
+     * @param boolean $sendEmailOnSubmissionRated
+     * @return UserEmailOptions
+     */
+    public function setSendEmailOnSubmissionRated($sendEmailOnSubmissionRated)
+    {
+        $this->sendEmailOnSubmissionRated = $sendEmailOnSubmissionRated;
+
+        return $this;
+    }
+
+    /**
+     * Get sendEmailOnSubmissionRated
+     *
+     * @return boolean 
+     */
+    public function getSendEmailOnSubmissionRated()
+    {
+        return $this->sendEmailOnSubmissionRated;
+    }
+
+    /**
+     * Set sendEmailOnNewAssignment
+     *
+     * @param boolean $sendEmailOnNewAssignment
+     * @return UserEmailOptions
+     */
+    public function setSendEmailOnNewAssignment($sendEmailOnNewAssignment)
+    {
+        $this->sendEmailOnNewAssignment = $sendEmailOnNewAssignment;
+
+        return $this;
+    }
+
+    /**
+     * Get sendEmailOnNewAssignment
+     *
+     * @return boolean 
+     */
+    public function getSendEmailOnNewAssignment()
+    {
+        return $this->sendEmailOnNewAssignment;
+    }
+
+    /**
+     * Set sendEmailOnNewSubmission
+     *
+     * @param boolean $sendEmailOnNewSubmission
+     * @return UserEmailOptions
+     */
+    public function setSendEmailOnNewSubmission($sendEmailOnNewSubmission)
+    {
+        $this->sendEmailOnNewSubmission = $sendEmailOnNewSubmission;
+
+        return $this;
+    }
+
+    /**
+     * Get sendEmailOnNewSubmission
+     *
+     * @return boolean 
+     */
+    public function getSendEmailOnNewSubmission()
+    {
+        return $this->sendEmailOnNewSubmission;
+    }
+
+    /**
+     * Set userid
+     *
+     * @param integer $userid
+     * @return UserEmailOptions
+     */
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
+
+        return $this;
+    }
+
+    /**
+     * Get userid
+     *
+     * @return integer 
+     */
+    public function getUserid()
+    {
+        return $this->userid;
+    }
+}

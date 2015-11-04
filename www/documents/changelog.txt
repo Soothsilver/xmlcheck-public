@@ -1,0 +1,205 @@
+1.10
+* <b>Newer grading supersedes the old one.</b> If a teacher grades a student's submission for an assignment where a submission by that student was already graded, then only the newer grading will be counted. Database was updated to account for this retrospectively (4 cases).
+
+1.09
+* <b>Problems without plugins now work.</b> Previously, if a student uploaded a submission for a problem that had no corrective plugin, the submission would never show up in any tables.
+* <b>Exported.</b>This version of the program is exported to the disk that accompanies Petr Hudeček's Bachelor thesis.
+
+1.08
+* <b>Compiler now uses Java 8.</b> Due to an oversight, previously, students' Java sources were compiled using Javac 7 and run using Java 8. Now, the compiler uses Java 8 as it should have.
+* <b>Sorting tables.</b> A regression was fixed that caused sort to be canceled when table data was refreshed.
+* <b>__MACOSX.</b> Previously, if a Mac OS X user sent the entire submission in a zipped folder, it would not be accepted because when creating a ZIP file, Mac OS X automatically adds another folder with metadata. That folder is now ignored.
+
+1.07
+* <b>DOM/SAX.</b> A workaround was added that causes the DOM/SAX plugin to output the SAX output text file more often than before.
+
+1.06
+* <b>Bugfix.</b> Previously, groups would show up in the "Available Groups" table, even though you were already subscribed.
+* <b>Grading.</b> When teacher wants to grade a submission, the highest possible amount of points will be pre-selected.
+* <b>New message of the day.</b> Information was added to the message-of-the-day that tells new users to subscribe to a group so they can see assignments.
+
+1.05
+* <b>Bugfix.</b> Additional bugs were fixed.
+
+1.04
+* <b>Bugfix.</b> Many bugs introduced since 1.00 were fixed.
+* <b>Submitting to private group.</b> Previously, a student was able to upload submissions to a private group he or she was requesting to join but was not yet granted access.
+
+1.03
+* <b>Similarity module.</b> Submissions are now checked against each other for suspicious similarity.
+* <b>DTD.</b> Due to an update in used libraries, one of the error message was no longer informative.
+* <b>DOM/SAX.</b> Sometimes, due to timing, user output would not be captured and would corrupt the plugin reply.
+* <b>XSD.</b> The schemaLocation attribute was not interpreted correctly.
+* <b>New submission system.</b> When the user deleted their latest submission, the second latest submission would not automatically become their latest one.
+* <b>New submission system.</b> When the user uploaded a new submission, their previous submission would remain marked as latest.
+* <b>Attachments.</b> Editing an attachment would produce an error.
+* <b>Database.</b> Foreign keys introduced in all relationships between tables.
+* <b>User interface.</b> Database definition corrected to allow for longer usernames, passwords and object names.
+* <b>User interface.</b> Changing language to either Czech or English would cause the user interface to briefly display in English.
+* <b>User interface.</b> If the user typed text that is not a number into the textbox for the number of rows, a corrupted cookie would be saved on the user's computer.
+* <b>User interface.</b> The table of similar submissions would not sort correctly.
+* <b>Language.</b> Many grammar error and typos fixed in documentation files.
+
+1.02
+* <b>New submission system.</b> The confirmation system was overhauled completely.
+* <b>Bugfix.</b> The script AddSubscription would add a subscription even though the user wasn't authorized to join a public group.
+* <b>Bugfix.</b> Various bugs were fixed. Some of them were detected by running IntelliJ IDEA's static analysis tool.
+* <b>DOM/SAX.</b>  In the DOM/SAX homework, it is now possible to enclose the entire submission in a folder in the ZIP file.
+* <b>XQuery.</b> In the XQuery homework, it is now possible to enclose the entire submission in a folder in the ZIP file. In addition, the query files no longer have to be in a subfolder called xquery, they may be right next to the main file instead.
+* <b>Tests, questions, attachments.</b> These features now work again even after database and table refactoring.
+* <b>Major database access refactoring.</b> The custom ORM framework is now fully removed. Doctrine2 is used instead.
+* <b>Login screen.</b>The login screen was too small. At some resolutions, buttons overflowed to a second line.
+* <b>Database.</b> Previously, the student usertype was represented by 0 in database, which caused problems when importing a database dump because inserting 0 into the ID field was considered as using auto-increment. Now, the student usertype is represented by 1 instead.
+* <b>Field lengths.</b> All text information from the user may now have any length. Username and password are still limited, but less than before: They must be at least 5 characters and at most 200 characters.
+* <b>Registration e-mail editable.</b> The e-mail sent to the user after registration can now be modified by editing a simple text file.
+* <b>Path resolving.</b> The user no longer has to specify the directory of the project in a configuration file because the system infers it.
+* <b>Refactoring.</b> Major refactoring of the project structure, and of all PHP files and all Java files.
+* <b>Reloading manifests.</b> The administrator now has the option to reload plugin information from manifest files.
+* <b>Plagiarism checking.</b> Added plagiarism checking functionality. This is not complete, though.
+
+1.01
+* <b>Attachments.</b> When you delete an attachment, the reference to it from questions is also removed.
+* <b>Bugfix.</b> Fixed bugs introduced in the previous version.
+
+1.00
+* <b>Upgraded to jQuery 1.4.3.</b> Required fixing a bug in Builder.js, where we appended to a nonexistent body. That is no longer possible.
+* <b>Bugfix.</b> Fixed a bug that caused Problems not to be editable.
+* <b>Bugfix.</b> Fixed a bug that caused the 'Public' checkbox in Group editing to not load.
+* <b>Bugfix.</b> Fixed a bug that prevented user ratings from being sorted correctly.
+* <b>Bugfix.</b> Assignments for problems without automatic correction were not displayed (because INNER JOIN was used instead of LEFT JOIN).
+
+* <i>Discovered by unit tests:</i>
+* <b>Bugfix.</b> Fixed a bug in ArrayUtils::filterByKeys where non-strict in_array was used.
+* <b>Bugfix.</b> Fixed a bug in Filesystem::combinePaths where slash at end was left in
+* <b>Bugfix.</b> Fixed a bug in Filter::isNonNegativeInteger, which did not work.
+* <b>Bugfix.</b> Fixed a bug in Filter::isDate which outputted Notice errors if it wasn't a date
+* <b>Bugfix.</b> Removed isRegexp function which did not work and was not used.
+* <b>Bugfix.</b> Fixed a documentation error in ArrayUtils::sortByKeys. The function does not actually turn array keys into strings, that is not possible in PHP.
+* <b>Bugfix.</b> Fixed a regex bug that caused Filter::isName to always return true.
+
+* <i>Discovered by examining past submissions:</i>
+* <b>XSD.</b> The default use of optional attributes was not recognized as such.
+* <b>XSD.</b> If a simple type was used in an attribute rather than an element and was inset in it, this was not recognized as a use of simple type.
+* <b>XSD.</b> Improved task description.
+* <b>DTD.</b> Fixed a bug where parameter entities were not recognized by the counter.
+* <b>DTD.</b> Improved task description.
+* <b>DTD.</b> Bugfix with general unparsed entities. The NDATA identifier should not in quotes.
+
+* <b>Performance.</b> Tables now load more quickly.
+* <b>Compression.</b> Fixed a bug in the Compression utilities that created partially invalid ZIP files on Windows.
+* <b>Navigation.</b> If you attempt to access a protected page (anything beyond the login screen), you are returned to the login screen, but the hashtag-address remembers where you wanted to go and will return you there when you actually log in.
+* <b>Submissions.</b> Students can now download their submissions.
+* <b>Tables.</b> Table height (default 15) is now saved as a cookie.
+* <b>InnoDB.</b> InnoDB is now used in all tables instead of MyISAM.
+* <b>Wording.</b> Many typographical tweaks and grammar cleanups.
+* <b>AuroraDTD.</b> It can now handle internal subset.
+* <b>AuroraDTD.</b> Conditional sections are forbidden in internal subset.
+* <b>Composer.</b> We now use Composer for SwiftMailer.
+* <b>Refactoring.</b> Major refactoring occurred.
+* <b>Firefox.</b> In Mozilla Firefox, it was not possible to select text.
+<small>
+* <b>No more installer.</b> The project will no longer have an installer.
+* <b>SwiftMailer.</b> Instead of the PHP module Mail, we are now using SwiftMailer. We are no longer dependent on any PEAR modules.
+* <b>More parameters for mail sending.</b> In the config.ini file, it is now possible to set SMTP encryption, server port and sender name.
+* <b>Bugfix in Autoloader.</b> The autoloader will not print more informative error message and not generate Notices when it fails to find a file.
+</small>
+
+0.78
+* <b>File copy bug.</b> Fixed a bug introduced in 0.72 which caused output and submission files to be written to wrong folders because the configuration from 'internal.ini' was not loaded into auto-correct plugins.
+* <b>Home. </b> Fixed a bug where previously, sometimes not all tasks requiring attention would be displayed, if the callback functions were called in a wrong pseudorandom order.
+* <b>Home. </b> Tasks "requiring attention" can now be clicked to get to the appropriate screen.
+* <b>DTD.</b> NDATA entities are now properly parsed.
+* <b>DTD.</b> Additional illegal text at the end of !declarations now results in an error.
+* <b>DTD.</b> All entity declaration information can now be extracted from a parsed DTD.
+* <b>Bad browser.</b> Fixed a bug in the alternate-browser page.
+* <b>XML Schema.</b> The base of a simple-content complex-type element with attributes no longer must be from the XML Schema namespace.
+* <b>XSLT.</b> When XSLT is valid but XML is not, no error message used to be printed. Now, an error message is printed.
+* <b>XSLT.</b> The XML filename now need not be data.xml and the XSL script need not be data.xsl. Only the file extensions matter now.
+* <b>XSLT.</b> It is no longer necessary to use the 'xsl' prefix. Other prefixes may be used for the http://www.w3.org/1999/XSL/Transform namespace.
+* <b>XSLT.</b> The requirement for complex XPath expression was removed and the subsystem checking this also. This fixes some bugs.
+* <b>Wording. </b> Minor wording upgrades.
+
+0.77
+* <b>Hide instead of delete.</b> Submissions can no longer be deleted. Instead, they will be hidden - not shown to anyone, but still available in the database.
+* <b>Notes with submissions.</b> Tutors can now add notes to their ratings. These notes are e-mailed to the student and visible to the student in the interface.
+* <b>Fatal errors don't crash plugins.</b> A fatal error or an exception no longer crash plugins. Instead, the submission is marked as "0%" and the error shown to the user.
+* <b>All errors shown.</b> Previously, only the first error encountered during XML parsing was shown. Now, all errors reported by libxml are shown.
+* <B>XML Schema: minOccurs/maxOccurs.</b> Attributes minOccurs/maxOccurs now suffice anywhere where they are legal, not merely in "xs:element".
+* <b>DOM/SAX: Console.</b> You can now print to standard output from your DOM transformer.
+* <b>DOM/SAX: Java 7 now permitted in DOM/SAX plugin.</b> Previously, the user source files were compiled using Java 1.5. Now, Java 7 is used.
+* <b>DOM/SAX: Better error messages.</b> Now, the plugin will output better error messages than "null".
+* <b>DTD: UTF-16.</b> The XML/DTD plugin can now handle UTF-16 files if they have the Byte Order Mark.
+* <b>DTD: Require entities.</b> User must now declare an ENTITY.
+* <b>DTD: Require entity use.</b> User must now actually use a non-trivial entity.
+* <b>DTD: Correct binding.</b> User must now use DOCTYPE correctly to link the XML file to the DTD file.
+* <b>DTD: Mixed content now required.</b> Previously, the plugin considered no content to be mixed content. Now, mixed content means elements mixed with non-empty text nodes.
+* <small><b>All plugins: libxml errors no longer ignored.</b> Removed a feature that silently ignored some libxml2 triggered errors. Now, all errors cause validation to fail and are reported to the user.</small>
+* <small><b>DTD: Friendlier error messages.</b> In some cases for the new DTD plugin.</small>
+* <small><b>xmlcheck.projekty.ms.mff.cuni.cz</b> upgraded to Debian Wheezy, PHP 5.5.11, Mysql 5.5 and Java 7.</small>
+
+0.76
+* <b>XML Schema auto-correct more lenient.</b> It now accepts filenames of different names than 'data.xml' and 'data.xsd'.
+* <b>XML Schema auto-correct requires that the XML refer to XSD.</b> The XML document now must use xsi:schemaLocation or xsi:noNamespaceSchemaLocation attributes to refer to the given XSD schema.
+* <b>Parameter entities within parameter entities.</b> New DTD parser now correctly expands parameter entities included literally in other parameter entity values.
+* <small><b>XmlSchema plugin now accepts invalid schemas.</b> Previously, if the given XSD file was invalid, the plugin would crash with a runtime error. Now, it reports the proper XML error to the user.</small>
+* <small><b>Case-insensitive file extensions.</b> .xml files are now recognized as well as .XML files.</small>
+
+0.75
+* <b>XML DTD plugin forked.</b> The new DTD autocorrect plugin, DTD2014, no longer uses the PEAR DTD parser which exhibited too many deficiencies and instead uses a custom parser. This new parser will only be in effect for the next year. The old plugin, XML XmlDtd, remains as backup.
+* <b>New DTD parser provides these new features:</b>
+** Conditional sections are properly parsed.
+** The DTD is declared invalid if it does not meet the specification (previously, it was only scanned for &lt;!ELEMENT&gt; and &lt;!ATTLIST&gt; tags). This does not make the auto-correct more strict since the DTD subsystem of libxml2 checks the validity of the DTD anyway.
+** It parses and extracts notations.
+** It parses and extracts both general and parametric entities.
+** It allows the character "&gt;" inside values.
+** It performs substitution of parametric entities for their replacement text.
+* <b>Submissions can be submitted late.</b> A student is now able to confirm a solution after deadline. The student and the tutor will both be warned that the solution is being submitted after its deadline.
+* <b>Files by any name are now allowed in the new XML/DTD plugin.</b> The names "data.xml" and "data.dtd" are no longer enforced.
+* <b>XPath auto-correct recognizes position tests better.</b> Use of last() now counts as a position test.
+* <b>Password Recovery feature added.</b> Users now have the option to send a password reset link to their e-mail.
+* <small><b>Current directory restored on exception.</b> Previously, if a plugin ended with a thrown exception, the current directory was not restored, therefore all the remaining parts of the test suite failed on unzip error.</small>
+* <small><b>Some Javascript files are auto-inserted.</b> It is no longer necessary to add some Javascript files manually when adding new tables, forms or widgets.</small>
+* <small><b>Wording.</b> Minor changes to some messages in UI.</small>
+* <small>Fixed a bug, where the function getTriggeredErrors always removed all the errors from the error array, regardless of what parameter was passed to it. This may cause previously accepted plugins to fail.</small>
+* <small>Fixed a bug, where the plugin crashed if more than one error was triggered that was to be removed, this only manifested itself when the above bug was fixed.</small>
+* <small><b>Plugin error messages more informative.</b> Previously, all text before the first colon in the error message was cut for some reason. This is no longer the case.</small>
+
+0.74
+* <b>More e-mail notifications.</b> It is now possible to send e-mails when a new assignment appears and when a student submits a solution.
+* <b>E-mail notifications can now be configured.</b> Users can now configure what notification e-mails they want to receive. By default, they will receive all of them.
+* <b>XPath auto-correct plugin is more lenient.</b> Attribute test must no longer be on the left-hand side of an expression. A descendant existence test may now have predicates at its end. The position() function may now be on the right-hand side of an expression. Position test can use the short syntax "[2]". Optional whitespace is now permitted in various circumstances (still not all of them, though).
+* <b>More secure hashing system implemented.</b> Previously, all password hashes were stored using simple MD5. The MD5 algorithm is somewhat easy to reverse and anyone with access to the database could have conceivably recovered user passwords. Now, passwords are stored using Blowfish-based salted algorithm that is much more difficult to brute force. All existing users will switch to the next algorithm the first time they change their password.
+* <b>Message of the day.</b> The administrator may now set a text to be displayed to all users on the home screen upon login.
+* <b>Application upgrade logs out all users.</b> When the application is upgraded to a new version, all users are logged out.
+* <small><b>Bugfix: E-mails are now sent when submission is rated.</b> Introduced in 0.72, along with the feature, was a bug that caused the "Your submission was rated" email to be sent to the tutor rather than to the student. This is now fixed.</small>
+* <small><b>Bugfix: Single directory within ZIP file.</b> Introduced in 0.73 was a bug, where if the ZIP file contained only a single directory and no regular files, and that directory contained another directory, the plugin would crash.</small>
+* <small><b>Bugfix: Assignments no longer must have autocorrect plugins.</b> Previously, due to a bug, assignments without an associated plugin were not displayed because the assignment and plugin tables were joined using inner join rather than left join.</small>
+* <small><b>Wording.</b> Minor changes to some messages in UI.</small>
+* <small><b>Call-by-reference removed.</b> We are, in theory, fully PHP5.5-compatible.</small>
+
+0.73
+* <b>No crash on conditional sections.</b> Previously, due to a bug in the PHP DTD parser, if you submitted a DTD with a conditional section, perhaps coupled with a parameter entity, the plugin crashed and caused various errors. Now, it will no longer crash and will print an informative error message (i.e. "please don't use conditional sections"). The bug in the parser is still not fixed, this is a workaround.
+* <b>You can change e-mail but keep password.</b> You are no longer forced to change (or retype twice) your password when you change your e-mail or name. The administrator can likewise now change your email, name and role without changing your password.
+* <b>Less restriction on solutions' directory structure.</b> If a submitted ZIP file contains only a single directory and no common files in its root directory, then the contents of this directory will be extracted rather than the entire file itself. Therefore, users will now be able to compress an entire folder with their solution rather than its contents.
+* <b>Sorting by dates works.</b> Previously, sorting by a date in any table exhibited weird behaviour: Rows were sorted only by the year, not by month, day and time because prior to sorting, the contents of the cell were put through the <i>parseFloat</i> function. Now, all tables can be sorted by all date columns correctly.
+* <b>New Filter form text visible.</b> Previously, styles were not properly applied to the "new filter" form under tables. This caused white text to appear on top of white background in the skin "Le Frog". Now, skins will work in the "new filter" form in the same way they do for normal forms
+* <b>Tables refresh more often.</b> Tables with submissions now refresh every 5 seconds instead of every 60 seconds. Therefore, you need not refresh the page or wait 30 second to see your submission correct.
+* <small><b>Corrective plugin now loaded in form.</b> Previously, when a lecturer edited a plugin, the text "[no correction]" was displayed in the &lt;select&gt; and the user had to select the correct plugin even when he wanted to change only the description. Now, the previous corrective plugin is displayed.</small>
+* <small><b>Upgrade to <i>mysqli</i>.</b> Previously, we used the PHP ext/mysql extension but that is deprecated in PHP 5.5. Now, the <i>mysqli</i> extension is used. We're still not PHP5.5-compatible, though.</small>
+* <small><b>Wording.</b> Minor changes to some messages in UI.</small>
+
+0.72
+* Whenever a submission is rated by a tutor, an e-mail will be sent to the user who submitted it.
+* Previously, the XML/DTD plugin crashed when encountering the percent sign in a notation (like this: &lt;!NOTATION something "%SYSTEMROOT%/paint.exe"&gt). This is legal according to the standard but due to a bug in PHP, it is not possible to parse such files. The plugin will now instead ask the user not to use the percent sign.
+* Previously, if a PHP error or warning occurred during a server request, the request would silently fail. Now, in some cases, it will instead be shown to the user.
+* <small>Configuration has been split to 'config.ini' for user configuration and 'internal.ini' for version, file and directory information. This will allow for easier upgrades.</small>
+
+0.71
+* Autocorrect now provides a useful error message when user submits something that is not a valid ZIP file.
+* DTD/XML plugin now provides a useful error message when the user's ZIP file does not contain the 'data.xml' or 'data.dtd' file.
+* This changelog is now visible.
+<span style='font-size: smaller'>* Fixed a bug introduced in 0.70 that prevented confirmation windows from showing up when submitting an incorrect solution.</span>
+
+0.70
+* Submissions that were corrected automatically but not yet confirmed now display the date and time at which they were uploaded.
+<span style='font-size: smaller'>* Assignment Manager will display 'Loading...' in the title bar when it is not yet fully loaded in the browser</span>

@@ -1,0 +1,132 @@
+<project name="XML Check" basedir=".">
+    <description>
+        This buildfile allows you to do perform various actions on the XMLCheck project.
+    </description>
+
+    <property name="jarfile.framework" value="AsmPluginFramework.jar" />
+    <property name="jarfile.domSax" value="DomSaxPlugin.jar" />
+    <property name="jarfile.xQuery" value="XQueryPlugin.jar" />
+    <property name="jarfile.similarity" value="similarity.jar" />
+    <property name="dir.java-plugins" location="java-plugins"/>
+    <property name="dir.tests" location="phptests"/>
+    <property name="dir.www"  location="www" />
+    <property name="dir.www.domSaxFolder" value="files/plugins/XML DomSax" />
+    <property name="dir.www.xQueryFolder" value="files/plugins/XML XQuery" />
+    <property name="dir.www.coreFolder" value="core" />
+    <property name="dir.java-plugins.src" location="${dir.java-plugins}/src" />
+    <property name="dir.java-plugins.lib" location="${dir.java-plugins}/lib" />
+    <property name="dir.java-plugins.generated-files" location="${dir.java-plugins}/generated-files" />
+    <property name="dir.java-plugins.build" location="${dir.java-plugins}/generated-files/build" />
+    <property name="dir.java-plugins.jars" location="${dir.java-plugins}/generated-files/jars" />
+    <property name="dir.exported-system" location="exported-system" />
+    <property name="dir.additional-files" location="additional-files" />
+
+    <property name="dir.similarity" location="similarity" />
+    <property name="dir.similarity.build" location="${dir.similarity}/build" />
+    <property name="dir.similarity.src" location="${dir.similarity}/src" />
+    <property name="dir.similarity.lib" location="${dir.similarity}/lib" />
+
+    <path id="classpath.java-plugins">
+        <fileset dir="${dir.java-plugins.lib}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+    <path id="classpath.similarity">
+        <fileset dir="${dir.similarity.lib}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+    <target name="export-with-example-config"  depends="export" description="Exports, then copies the standard base config.ini file into the exported directory.">
+        <copy file="${dir.additional-files}/config.ini" tofile="${dir.exported-system}/core/config.ini" />
+    </target>
+    <target name="export" depends="update-all" description="Exports the current version of the system to a separate directory that is ready to be uploaded to a production server. This means the contents of the 'www' subdirectory is copied, except that submissions and output are not copied (plugins are). The config.ini file isn't copied either.">
+        <delete includeemptydirs="true">
+            <fileset dir="${dir.exported-system}" includes="**/*" />
+        </delete>
+        <copy todir="${dir.exported-system}">
+            <fileset dir="${dir.www}">
+                <exclude name="**/config.ini" />
+                <exclude name="**/files/submissions/**" />
+                <exclude name="**/files/output/**" />
+            </fileset>
+        </copy>
+        <copy file="${dir.additional-files}/install.sql" tofile="${dir.exported-system}/install.sql" />
+        <mkdir dir="${dir.exported-system}/files/submissions" />
+        <mkdir dir="${dir.exported-system}/files/output" />
+    </target>
+    <target name="update-all" depends="update-plugins, update-similarity" description="Recompile all three Java modules and copy them to the main application.">
+    </target>
+    <target name="update-similarity" depends="jar-similarity" description="Recompile the similarity module and copy it to the main application.">
+        <copy file="${dir.java-plugins.jars}/${jarfile.similarity}" tofile="${dir.www}/${dir.www.coreFolder}/${jarfile.similarity}" />
+    </target>
+    <target name="update-plugins" depends="jar-domsax, jar-xquery" description="Recompile the two Java-based plugins and copy them to the main application.">
+        <copy file="${dir.java-plugins.jars}/${jarfile.domSax}" tofile="${dir.www}/${dir.www.domSaxFolder}/${jarfile.domSax}" />
+        <copy file="${dir.java-plugins.jars}/${jarfile.xQuery}" tofile="${dir.www}/${dir.www.xQueryFolder}}/${jarfile.xQuery}" />
+    </target>
+    <target name="init" description="Create temporary directories in the generated-files directory.">
+        <mkdir dir="${dir.java-plugins.generated-files}" />
+        <mkdir dir="${dir.java-plugins.build}" />
+        <mkdir dir="${dir.java-plugins.jars}" />
+    </target>
+    <target name="compile" depends="init" description="Compile both Java verification plugins.">
+        <javac srcdir="${dir.java-plugins.src}" destdir="${dir.java-plugins.build}" includeantruntime="false">
+            <classpath refid="classpath.java-plugins" />
+        </javac>
+    </target>
+    <target name="compile-similarity" description="Compile the Similarity module.">
+        <javac srcdir="${dir.similarity.src}" destdir="${dir.similarity.build}" includeantruntime="false">
+            <classpath refid="classpath.similarity" />
+        </javac>
+    </target>
+    <target name="jar-framework" depends="compile" description="Create the hon2a AsM plugin framework jar file.">
+        <jar jarfile="${dir.java-plugins.jars}/${jarfile.framework}" basedir="${dir.java-plugins.build}" excludes="name/hon2a/asmp/**/*">
+            <zipfileset src="${dir.java-plugins.lib}/tools.jar" />
+            <zipfileset src="${dir.java-plugins.lib}/ecs.jar" />
+        </jar>
+    </target>
+    <target name="jar-domsax" depends="compile,jar-framework" description="Create the executable JAR file for the DomSax plugin.">
+        <jar
+                jarfile="${dir.java-plugins.jars}/${jarfile.domSax}"
+                basedir="${dir.java-plugins.build}"
+                includes="name/hon2a/asmp/domsax/*.class,Sandbox.class,DomSaxEntryPoint.class">
+
+            <zipfileset src="${dir.java-plugins.jars}/${jarfile.framework}" />
+            <manifest>
+                <attribute name="Main-Class" value="Sandbox" />
+                <!--  <attribute name="Main-Class" value="Sandbox" /> -->
+                <!--  <attribute name="Main-Class" value="name.hon2a.asmp.domsax.Main" />-->
+            </manifest>
+        </jar>
+    </target>
+    <target name="jar-xquery" depends="compile,jar-framework" description="Create the executable JAR file for the XQuery plugin.">
+        <jar
+                jarfile="${dir.java-plugins.jars}/${jarfile.xQuery}"
+                basedir="${dir.java-plugins.build}"
+                includes="name/hon2a/asmp/xquery/*.class">
+            <zipfileset src="${dir.java-plugins.jars}/${jarfile.framework}" />
+            <zipfileset src="${dir.java-plugins.lib}/saxon9.jar" />
+            <zipfileset src="${dir.java-plugins.lib}/saxon9-dom.jar" />
+            <manifest>
+                <attribute name="Main-Class" value="name.hon2a.asmp.xquery.Main" />
+            </manifest>
+        </jar>
+    </target>
+    <target name="jar-similarity" depends="compile-similarity" description="Create the executable JAR file for the Similarity module.">
+        <jar
+                jarfile="${dir.java-plugins.jars}/${jarfile.similarity}"
+                basedir="${dir.similarity.build}">
+            <zipgroupfileset dir="${dir.similarity.lib}" includes="*.jar" />
+            <manifest>
+                <attribute name="Main-Class" value="sooth.EntryPoint" />
+            </manifest>
+        </jar>
+    </target>
+    <target name="make-jars" depends="jar-domsax,jar-xquery,jar-similarity" description="Create executable JAR files for both Java-based plugins and for the similarity plugin for XML Check.">
+    </target>
+    <target name="clean" description="Remove all temporary automatically generated files." >
+        <delete includeemptydirs="true">
+            <fileset dir="${dir.java-plugins.build}" includes="**/*" />
+            <fileset dir="${dir.java-plugins.jars}" includes="**/*" />
+        </delete>
+    </target>
+</project>

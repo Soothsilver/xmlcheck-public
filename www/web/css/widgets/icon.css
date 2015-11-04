@@ -1,0 +1,32 @@
+.ui-icon-widget {
+	display: inline-block;
+}
+
+.ui-icon.ui-icon-label {
+	float: left;
+	margin-right: 0.3em;
+}
+
+.ui-icon.ui-icon-action {
+	float: right;
+	margin-left: 0.1em;
+}
+
+.ui-dialog-titlebar>.ui-icon-label {
+	left: -6px;
+	margin: 0 -2px 0 0;
+	position: relative;
+	top: -1px;
+}
+
+.ui-icon.ui-icon-none, .ui-icon.ui-icon-transparent {
+	background-image: none;
+}
+
+.ui-icon.ui-icon-none {
+	margin-right: -16px;
+}
+
+.ui-dialog-simple-close>.ui-icon {
+	margin: 0;
+}

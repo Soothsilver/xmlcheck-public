@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<plugin-manifest>
+	<mainFile>XpathChecker.php</mainFile>
+    <identifier>XPATH</identifier>
+	<type>php</type>
+	<description>
+        Vaše řešení musí obsahovat jeden validní XML soubor a pět legálních XPath dotazů, volitelně také DTD soubor.
+        Musíte dodržet tuto adresářovou strukturu:
+
+        /data.xml
+        /xpath/xpath1.xp
+        /xpath/xpath2.xp
+        /xpath/xpath3.xp
+        /xpath/xpath4.xp
+        /xpath/xpath5.xp
+        (Vše dohromady navíc může být zabalené v jedné složce.)
+
+        Používejte jen XPath 1.0.
+
+        Každý XPath dotaz opatřete komentářem uzavřeným do (: komentář :), který bude dotaz vysvětlovat.
+        XPath dotazy musí mezi sebou obsahovat:
+        1. Použití osy attribute (nebo @)
+        2. Predikát testující existenci potomka (např. otec[syn])
+        3. Predikát testující neexistenci potomka (např. otec[not(syn)])
+        4. Predikát testující pozici prvku (tj. [position()=...] nebo [...=position()] nebo [1] nebo [last()] apod.)
+        5. Funkci count()
+        6. Explicitní nezkrácené použití nějaké osy (např. following-sibling::vehicle)
+
+        Dotazy by navíc měly dávat smysl ve vašem tématu.
+
+        Příklad souboru XPath:
+
+        (: xpath1.xp: Získá počet vozidel, která uvezou alespoň pět lidí a přitom jsou dražší než 10 000 Kč. :)
+        count(//vehicle[capacity > 5 and cost > 10000])
+
+	</description>
+	<arguments>
+		<argument>Minimální počet XPath výrazů (výchozí: 5)</argument>
+	</arguments>
+</plugin-manifest>

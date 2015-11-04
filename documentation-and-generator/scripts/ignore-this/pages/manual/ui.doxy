@@ -1,0 +1,43 @@
+/** @page page_ui User interface elements
+
+@section sec_uiOverview Overview
+
+User interface uses just a few display elements to achieve simple look and unified
+style of access to various application features. Simple elements (not described in
+this manual, because their function is apparent) include buttons, dialogs, and
+a two-tiered "accordion" menu with collapsible sections. Only two complex elements
+are used - table and form - both of which are described in this part of the manual.
+One additional special element - error panel - is also described here.
+
+Mockups of application layout and complex display elements can be found
+@ref sec_uiLayout "in developer documentation" and are a good place to start,
+because of their simplicity.
+
+
+@section sec_uiDisplayElements Application layout and display elements
+
+- @subpage page_uiLayout
+- @subpage page_table
+- @subpage page_form
+- @subpage page_errors
+
+@section sec_uiThemes Themes (skins)
+
+User interface is themable (skinnable) and already contains a wide variety of
+themes, which can be easily switched (@mir Settings > User interface @endmir >
+@flr Visual theme @endflr). Application administrator can add additional themes
+using following steps:
+
+-# Create new theme using <a href="http://jqueryui.com/themeroller/">jQuery ThemeRoller</a>.
+-# Download your theme (select all components).
+-# Extract downloaded theme to some temporary location.
+-# Rename file <tt>css/custom-theme/jquery-ui-VERSION.custom.css</tt> (where VERSION
+	is jQuery version number) to <tt>jquery-ui.css</tt>.
+-# Rename to <tt>css/custom-theme/</tt> subfolder to desired name of your theme.
+-# Move renamed folder to <tt>APPLICATION_ROOT/web/lib/css/jquery-ui/</tt>.
+-# Add folder name to @c themes property in @ref asm.ui.js "APPLICATION_ROOT/web/js/asm.ui.js".
+
+@warning Above procedure is not an official application feature and should be
+	performed only by expert users.
+
+*/

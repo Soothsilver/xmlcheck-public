@@ -1,0 +1,14 @@
+.ui-panel {
+	line-height: 1.5em;
+	padding: 0.5em;
+}
+
+.ui-panel.ui-panel-with-icon {
+	padding-left: 2.5em;
+	position: relative;
+}
+
+.ui-panel.ui-panel-with-icon>.ui-icon:first-child {
+	position: absolute;
+	left: 0.5em;
+}

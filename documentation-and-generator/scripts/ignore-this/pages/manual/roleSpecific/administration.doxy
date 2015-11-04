@@ -1,0 +1,63 @@
+/** @page page_administration Administrator
+
+Administration tasks are located in @mir System @endmir section of the left menu.
+
+@section sec_administration Application administration
+
+Main purpose of administrator(s) (meaning administrators in the
+@ref page_users "role-distribution" sense, not system administrators) is creation
+of other user accounts and management of user account types.
+
+Only other administrator task is system log checking and handling of occured
+errors. Tools at administrators' disposal are very limited in this respect.
+They can only suspend user accounts (by creating user account type with no
+privileges and using it for the accounts to be "suspended") or delete them. All
+errors that cannot be solved in this fashion should be reported to main application
+administrator, who can in turn contact the author of the application.
+
+
+@section sec_administrationPages Content pages
+
+@subsection sec_administrationPageUsers Users
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new user</b> [@harr form]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit user</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete user</b> [@dialog confirmation]</li>
+</ul>
+
+Usernames are unique and immutable.
+
+User account with username @c admin cannot be removed and its type cannot be changed.
+This is the "system root" account with all privileges (there has to be undeletable
+user account like that, otherwise some application features might become unavailable).
+
+
+@section sec_administrationPageUserTypes User types
+
+<ul class="tableActions">
+	<li><span class="icon icon-plusthick">thick plus</span> <b>create new user type</b> [@harr form]</li>
+	<li><span class="icon icon-pencil">pencil</span> <b>edit user type</b> [@harr form]</li>
+	<li><span class="icon icon-trash">trash can</span> <b>delete user type</b> [@dialog confirmation]</li>
+</ul>
+
+User type names are unique and immutable.
+
+There are two special user types. User type @c ADMIN can be neither modified, nor
+deleted, and has all privileges (system root user account (@c admin) has this user
+type). User type @c STUDENT is the default user type. It is assigned to accounts
+created using Register account form and to all users whose user type has been
+deleted.
+
+@subsection sec_privilegeIcons Privilege icons
+
+Privileges set for defined user types are shown as icons for convenience. Mouse
+over individual icons in the table (resp. form) to find out which privileges
+they stand for.
+
+@section sec_administrationPageSystemLog System log
+
+System log has no actions. Column with the exclamation mark as header label contains
+error "severity" (see severity constants in @ref asm::core::Error "developer documentation"). 
+
+*/

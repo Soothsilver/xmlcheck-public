@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<plugin-manifest>
+    <identifier>DTD</identifier>
+	<mainFile>Dtd2014Checker.php</mainFile>
+	<type>php</type>
+	<description>
+        Vaše řešení musí obsahovat právě jeden .xml soubor a právě jeden .dtd soubor. Oba soubory musí být v UTF-8 bez Byte Order Mark.
+
+        Používejte XML verze 1.0.
+
+        Deklarace DOCTYPE souboru XML se musí odkazovat na .dtd soubor v řešení.
+        XML i DTD soubor musí být správně zformované a validní.
+
+        DTD musí obsahovat:
+        1. Prázdné elementy EMPTY.
+        2. Čistě textové elementy (#PCDATA).
+        3. Elementy s modelem (tedy non-mixed, non-text)
+        4. "mixed" elementy (tedy s textem i vnitřními elementy)
+        5. Deklaraci entity
+        6. Deklaraci ATTLIST
+        7. Deklaraci atributu #REQUIRED
+        8. Deklaraci atributu CDATA
+        9. Deklaraci atributu výčtového typu
+        10. Deklaraci atributu ID
+        11. Deklaraci atributu IDREF
+
+        XML musí použít každou funkcionalitu, která je vyžadována 11 body v předešlém odstavci, např. tedy musí obsahovat čistě textový element, různé druhy atributů, ID atribut a IDREF atribut.
+        XML dokument musí mít hloubku alespoň 5 ("depth").
+        Alespoň jeden element musí obsahovat alespoň 10 synů ("fan-out").
+
+        Dohromady musí být v XML a DTD souboru alespoň jedno použití vlastní nadefinované entity (obecné nebo parametrické), jedna instrukce ke zpracování, jedna sekce CDATA a jeden komentář.
+
+        (Jak fungují domácí úkoly v Technologiích XML: Systém zkontroluje určité prvky vašeho řešení, např. přítomnost všech součástí DTD dle výše uvedeného seznamu nebo validitu souborů. Pak vám oznámí, že vaše řešení prochází na 100%. Tím ovšem ještě úkol nemáte splněný. Podívá se na něj ještě váš cvičící, který vám teprve přidělí body - může jich přidělit méně než maximum, např. pokud váš XML dokument nemodeluje vhodně zvolenou realitu, je příliš jednoduchý, nesmyslný, nebo jen chytře obchází automatické kontroly. Na druhou stranu, cvičící vám může přidělit maximální počet bodů, i když systém hlásí méně než 100%, pokud usoudí, že vaše řešení je v pořádku a chyba je v automatickém ohodnocování. V takovém případě ale prosím napište cvičícímu e-mail (a pošlete mu vaše řešení), aby mohla být chyba opravena.)
+	</description>
+	<arguments>
+		<argument>Minimální očekávaná hloubka (výchozí: 5)</argument>
+		<argument>Jeden element musí obsahovat alespoň toto množství synů (výchozí: 10)</argument>
+	</arguments>
+</plugin-manifest>

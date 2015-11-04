@@ -1,0 +1,11 @@
+.ui-cursor-default {
+	cursor: default;
+}
+
+.ui-cursor-text {
+	cursor: text;
+}
+
+.ui-cursor-action {
+	cursor: pointer;
+}

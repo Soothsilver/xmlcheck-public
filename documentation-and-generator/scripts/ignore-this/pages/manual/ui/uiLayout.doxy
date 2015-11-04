@@ -1,0 +1,85 @@
+/** @page page_uiLayout User interface layout
+
+@section sec_uiLayoutLogin Pre-login layout
+
+Users have access only to three "pages" before they log in: login form, register
+form, and activation form. These can be switched between using buttons as shown
+in the figure below (login form is shown by default).
+
+@image html loginLayout.screen.png Pre-login layout
+
+@section sec_uiLayoutMain Main layout
+
+Rest of the application has unified layout described by the following figure.
+
+@image html uiLayout.screen.png Main application layout
+
+<dl>
+	<dt>Top bar</dt>
+	<dd>Application header (present on all pages).</dd>
+	<dt>Logo & application name</dt>
+	<dd>Click to get to @ref sec_uiLayoutHome "\"home page\"".</dd>
+	<dt>User's real name</dt>
+	<dd>Shows which user is logged in at all times.</dd>
+	<dt>Logout button</dt>
+	<dd>Click to get back to login screen.</dd>
+	<dt>Menu</dt>
+	<dd>Two-tiered @ref sec_uiLayoutMenu "menu" serving as main navigation (present
+		on all pages).</dd>
+	<dt>Content area</dt>
+	<dd>Contents of this area are specific for every page.</dd>
+</dl>
+
+@subsection sec_uiLayoutMenu Menu
+
+Menu serves as main navigation element, although some pages include additional
+means of content-switching. It is best described by the following figure.
+
+@image html menu.screen.png Menu
+
+<dl>
+	<dt>Section headers</dt>
+	<dd>Menu is split into sections for convenience. Which section are shown depends
+		on user account type. Click on section header to open corresponding section
+		(only one section is open at a time).</dd>
+	<dt>Selected header</dt>
+	<dd>Header of currently open section is highlighted.</dd>
+	<dt>Menu items</dt>
+	<dd>Clicking on menu item shows corresponding content in content area.</dd>
+	<dt>Current page</dt>
+	<dd>Menu item corresponding to content that is currently being shown is highlighted.</dd>
+</dl>
+
+Which content is being shown is also reflected by address in browser address bar
+and users can use standard browser buttons @c Back and @c Forward to switch between
+content they already visited.
+
+@subsection sec_uiLayoutHome Home page
+
+"Home" (or "default") page is shown right after login and contains up to four
+panels:
+
+<dl>
+	<dt>Welcome message</dt>
+	<dd>Shown only after login or application restart (i.e. page reload) </dd>
+	<dt>User account info</dt>
+	<dd>Aggregated important info for this user account. Can contain one or more
+		of the following items (depending on user account type):
+		<ul>
+			<li>sums of ratings received for uploaded solutions, divided by subscribed
+				groups (student)</li>
+			<li>number of pending assignments (student)</li>
+			<li>number of uploaded submissions that are corrected but not yet confirmed
+				(student)</li>
+			<li>number of solutions waiting to be rated (tutor)</li>
+			<li>number of incoming subscription requests (tutor)</li>
+			<li>number of new errors in system log since previous login (administrator)</li>
+		</ul>
+	</dd>
+	<dt>About the project</dt>
+	<dd>Short info about the application with link to this documentation.</dd>
+	<dt>Copyright</dt>
+	<dd>Copyright notice.</dd>
+</dl>
+
+*/

@@ -1,0 +1,5 @@
+[XMLCheck] Nový úkol byl zadán (%{Problem})
+
+Váš cvičící vyvěsil na XMLCheck nový úkol pro vaší skupinu (%{Group}). Úkol se jmenuje "%{Problem}". Termín, do kterého musí být odevzdaný, je: %{Deadline}. Tento e-mail byl automaticky poslán všem členům této skupiny v %{Date}.
+
+Zadání úkolu si můžete přečíst zde: %{Link}

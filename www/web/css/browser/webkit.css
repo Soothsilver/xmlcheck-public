@@ -1,0 +1,7 @@
+.ui-table > table {
+	width: 100%;
+}
+
+.ui-table.ui-table-with-caption caption .ui-table-caption {
+	margin-right: -1px;
+}
